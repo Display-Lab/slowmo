@@ -1,15 +1,81 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="http://slowmo.internal/terms#"
-     xml:base="http://slowmo.internal/terms"
+<rdf:RDF xmlns="http://www.semanticweb.org/milk/ontologies/2018/5/untitled-ontology-22#"
+     xml:base="http://www.semanticweb.org/milk/ontologies/2018/5/untitled-ontology-22"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:obo="http://purl.obolibrary.org/obo/"
+     xmlns:efo="http://www.ebi.ac.uk/efo/">
     <owl:Ontology rdf:about="http://slowmo.internal/terms#">
-        <rdfs:comment>need to add IAO:0000115 in order to ensure semantic defintions are standard across all ontologies</rdfs:comment>
         <rdfs:comment>slomo is a working ontology-like structure in .owl used to define meta-terms, working-in-progress terms and IRIs needed for other knowledge-base processes. There is no import structure and currently no external dependancies.</rdfs:comment>
+        <rdfs:comment>need to retain some IAO annoation properties (see if there&apos;s a way to import only these)</rdfs:comment>
     </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000115 -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000115"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000116 -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000116"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000117 -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000117"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000119 -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000119"/>
+    
+
+
+    <!-- http://www.ebi.ac.uk/efo/definition -->
+
+    <owl:AnnotationProperty rdf:about="http://www.ebi.ac.uk/efo/definition"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000050 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/BFO_0000050"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0002434 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0002434"/>
     
 
 
@@ -24,17 +90,235 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/psdo#psdo_0000007 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/psdo#psdo_0000007">
+        <obo:IAO_0000115>A coordinated set of activities designed to change specified behaviour patterns</obo:IAO_0000115>
+        <obo:IAO_0000117>John Rincón</obo:IAO_0000117>
+        <obo:IAO_0000119>Michie S, Stralen MMV, West R. The behaviour change wheel: A new method for characterising and designing behaviour change interventions. Implementation Science. 2011;6(1).</obo:IAO_0000119>
+        <rdfs:label xml:lang="en">behavior change intervention</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/psdo#psdo_0000010 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/psdo#psdo_0000010">
+        <obo:IAO_0000115>a measurable action that is engaged in by a performer</obo:IAO_0000115>
+        <obo:IAO_0000117 xml:lang="en">John Rincón</obo:IAO_0000117>
+        <rdfs:label xml:lang="en">behavior</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/psdo#psdo_0000024 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/psdo#psdo_0000024">
+        <obo:IAO_0000115>The social and physical environment in which an intervention takes place.</obo:IAO_0000115>
+        <obo:IAO_0000117>John Rincón</obo:IAO_0000117>
+        <obo:IAO_0000119>Adapted from West, R. and Michie, S. (2016). A Guide to Development and Evaluation of Digital Behavior Interventions in Healthcare. Silverback Publishing.</obo:IAO_0000119>
+        <rdfs:label xml:lang="en">setting</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/psdo#psdo_0000025 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/psdo#psdo_0000025">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/psdo#psdo_0000007"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115>The medium through, and style in which, feedback is given to a performer</obo:IAO_0000115>
+        <obo:IAO_0000117>John Rincón</obo:IAO_0000117>
+        <obo:IAO_0000119>Adapted from West, R. and Michie, S. (2016). A Guide to Development and Evaluation of Digital Behavior Interventions in Healthcare. Silverback Publishing.</obo:IAO_0000119>
+        <rdfs:label xml:lang="en">delivery</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/psdo#psdo_0000035 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/psdo#psdo_0000035">
+        <obo:IAO_0000117>John Rincón</obo:IAO_0000117>
+        <efo:definition>An appraisal with represent the performance behavior.</efo:definition>
+        <rdfs:label xml:lang="en">appraisal of performance behavior</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/psdo#psdo_0000085 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/psdo#psdo_0000085">
+        <efo:definition>A capability realized in the process of performing a performance behavior</efo:definition>
+        <rdfs:label xml:lang="en">performance behavior capability</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/psdo#psdo_0000086 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/psdo#psdo_0000086">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/psdo#psdo_0000085"/>
+        <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/psdo#psdo_0000087"/>
+        <efo:definition>A capability realized when a performer is able to consistently carry out a performance behavior at a high level of excellence</efo:definition>
+        <rdfs:label xml:lang="en">dominant performance behavior capability</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/psdo#psdo_0000087 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/psdo#psdo_0000087">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/psdo#psdo_0000085"/>
+        <efo:definition>A capability realized when a performer is not able to consistently carry out a performance behavior at a high level of excellence</efo:definition>
+        <rdfs:label xml:lang="en">nondominant performance behavior capability</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/psdo#psdo_0000088 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/psdo#psdo_0000088">
+        <efo:definition>An independent continuant which represents the union of the features of a situation and those of a template</efo:definition>
+        <rdfs:label xml:lang="en">candidate</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/psdo#psdo_0000089 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/psdo#psdo_0000089">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/psdo#psdo_0000088"/>
+        <obo:IAO_0000116>This is as opposed to &quot;Naughty_Candidate&quot;, which is an innappropriate candidate that would probably create inappropriate mischief.  Again according to psychological theory</obo:IAO_0000116>
+        <obo:IAO_0000117>John Rincón</obo:IAO_0000117>
+        <efo:definition>A candidate thats situation and template characteristics are complementary according to theory</efo:definition>
+        <rdfs:label xml:lang="en">appropriate candidate</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/psdo#psdo_0000113 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/psdo#psdo_0000113">
+        <rdfs:label>spek terms</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/psdo#psdo_0000118 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/psdo#psdo_0000118">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/psdo#psdo_0000113"/>
+        <obo:IAO_0000115>a sensitivity of the recipient</obo:IAO_0000115>
+        <rdfs:label>regulatory focus</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/psdo#psdo_0000119 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/psdo#psdo_0000119">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/psdo#psdo_0000118"/>
+        <obo:IAO_0000115>definition needed</obo:IAO_0000115>
+        <rdfs:label>prevention focus</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/psdo#psdo_0000120 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/psdo#psdo_0000120">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/psdo#psdo_0000118"/>
+        <obo:IAO_0000115>Definition Needed</obo:IAO_0000115>
+        <rdfs:label>promotion focus</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/psdo#psdo_0000125 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/psdo#psdo_0000125">
+        <obo:IAO_0000115>An indication of the state affairs of an accomplished behavior</obo:IAO_0000115>
+        <rdfs:label>performance signal</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/psdo#psdo_0000126 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/psdo#psdo_0000126">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/psdo#psdo_0000125"/>
+        <obo:IAO_0000115>A performance signal that indicates the performance is bad</obo:IAO_0000115>
+        <rdfs:label>negative signal</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/psdo#psdo_0000127 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/psdo#psdo_0000127">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/psdo#psdo_0000125"/>
+        <obo:IAO_0000115>A performance signal that indicates the performance is good</obo:IAO_0000115>
+        <rdfs:label>positive signal</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/psdo#psdo_0000132 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/psdo#psdo_0000132">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/psdo#psdo_0000113"/>
+        <obo:IAO_0000115>Definition Needed</obo:IAO_0000115>
+        <rdfs:label>capability barrier</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/psdo#psdo_0000134 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/psdo#psdo_0000134">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/psdo#psdo_0000113"/>
+        <obo:IAO_0000115>Definition Needed</obo:IAO_0000115>
+        <rdfs:label>normative comparator</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/psdo#psdo_0000135 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/psdo#psdo_0000135">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/psdo#psdo_0000113"/>
+        <obo:IAO_0000115>a causal pathway from an intervention to a situation</obo:IAO_0000115>
+        <rdfs:label>intervention situation relationship</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/psdo#psdo_0000139 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/psdo#psdo_0000139">
+        <obo:IAO_0000115>a determinable quality that is dependant on human beings organizations and instantiated by measurement values of a behavior process</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">performance</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://slowmo.internal/terms#slowmo_0000001 -->
 
     <owl:Class rdf:about="http://slowmo.internal/terms#slowmo_0000001">
+        <obo:IAO_0000115>definition needed</obo:IAO_0000115>
         <rdfs:label xml:lang="en">spek</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://slowmo.internal/terms#slowmo_0000003 -->
+    <!-- http://slowmo.internal/terms#slowmo_0000002 -->
 
-    <owl:Class rdf:about="http://slowmo.internal/terms#slowmo_0000003">
+    <owl:Class rdf:about="http://slowmo.internal/terms#slowmo_0000002">
+        <obo:IAO_0000115>Definiton Needed</obo:IAO_0000115>
         <rdfs:label xml:lang="en">location</rdfs:label>
     </owl:Class>
 </rdf:RDF>
