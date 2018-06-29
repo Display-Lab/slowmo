@@ -1,10 +1,10 @@
 # slowmo
 slomo is a working ontology-like structure in .owl used to define meta-terms, working-in-progress terms and IRIs needed for other knowledge-base processes. There is no import structure and currently no external dependancies. This work is not peer-reviewed.
 
-## Competing Interests
+### Competing Interests
 The authors declare no competing interests.
 
-## Acknowledgements
+### Acknowledgements
 Research reported in this ontology was supported by the National Library of Medicine of the National Institutes of Health under grant number 1K01LM012528-01.
 
 ## License
