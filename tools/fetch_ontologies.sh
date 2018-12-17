@@ -23,10 +23,10 @@ done
 
 # Get path to the scripts directory.
 SCRIPT_DIR=$(dirname "${THIS_SCRIPT}")
-IMPORTS=../imports/
-PSDO='https://github.com/Display-Lab/psdo/blob/master/psdo.owl'
-CPO='https://github.com/Display-Lab/cpo/blob/master/cpo.owl'
+IMPORTS=$SCRIPT_DIR/../imports/
+PSDO='https://raw.githubusercontent.com/Display-Lab/psdo/master/psdo.owl'
+CPO='https://raw.githubusercontent.com/Display-Lab/cpo/master/cpo.owl'
 
 # get DISPLAY LAB ontologies
-wget $PSDO -P $IMPORTS
-wget $CPO -P $IMPORTS
+wget 'https://raw.githubusercontent.com/Display-Lab/psdo/master/psdo.owl' -P $IMPORTS
+wget 'https://raw.githubusercontent.com/Display-Lab/cpo/master/cpo.owl' -P $IMPORTS
