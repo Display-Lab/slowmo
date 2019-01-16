@@ -9,9 +9,10 @@
      xmlns:skos="http://www.w3.org/2004/02/skos/core#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:obo="http://purl.obolibrary.org/obo/"
-     xmlns:efo="http://www.ebi.ac.uk/efo/">
+     xmlns:efo="http://www.ebi.ac.uk/efo/"
+     xmlns:csvw="http://www.w3.org/ns/csvw#">
     <owl:Ontology rdf:about="http://example.com/slowmo">
-        <owl:imports rdf:resource="http://purl.org/dc/elements/1.1"/>
+        <owl:imports rdf:resource="http://www.w3.org/ns/csvw#"/>
         <rdfs:comment>The ontology content is licensed under a Creative Commons Attribution 4.0 International License.
 
 ### Source Code
@@ -28,10 +29,10 @@ distributed under the License is distributed on an &amp;quot;AS IS&amp;quot; BAS
 WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License</rdfs:comment>
         <rdfs:comment>slomo is a working ontology-like structure in .owl used to define meta-terms, working-in-progress terms and IRIs needed for other knowledge-base processes. There is no import structure and currently no external dependancies.</rdfs:comment>
     </owl:Ontology>
+    
 
 
-
-    <!--
+    <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
     // Annotation properties
@@ -39,7 +40,7 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-
+    
 
 
     <!-- http://purl.obolibrary.org/obo/IAO_0000115 -->
@@ -48,10 +49,69 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
         <rdfs:comment>Imported from the Information Artifact Ontology</rdfs:comment>
         <rdfs:label>definition</rdfs:label>
     </owl:AnnotationProperty>
+    
 
 
+    <!-- http://purl.org/dc/terms/description -->
 
-    <!--
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/description"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/hasVersion -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/hasVersion"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/issued -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/issued"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/modified -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/modified"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/publisher -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/publisher"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/title -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/title"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#note -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#note"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#date -->
+
+    <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#date"/>
+    
+
+
+    <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
     // Object Properties
@@ -59,7 +119,7 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-
+    
 
 
     <!-- http://example.com/slowmo#HasCandidate -->
@@ -67,7 +127,7 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
     <owl:ObjectProperty rdf:about="http://example.com/slowmo#HasCandidate">
         <rdfs:label>has candidate</rdfs:label>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- http://example.com/slowmo#IsAbout -->
@@ -75,7 +135,34 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
     <owl:ObjectProperty rdf:about="http://example.com/slowmo#IsAbout">
         <rdfs:label>is about</rdfs:label>
     </owl:ObjectProperty>
+    
 
+
+    <!-- http://example.com/slowmo#IsAboutISR -->
+
+    <owl:ObjectProperty rdf:about="http://example.com/slowmo#IsAboutISR">
+        <rdfs:subPropertyOf rdf:resource="http://example.com/slowmo#IsAbout"/>
+        <rdfs:label>is about ISR</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.com/slowmo#IsAboutPerformer -->
+
+    <owl:ObjectProperty rdf:about="http://example.com/slowmo#IsAboutPerformer">
+        <rdfs:subPropertyOf rdf:resource="http://example.com/slowmo#IsAbout"/>
+        <rdfs:label>is about performer</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.com/slowmo#IsAboutTemplate -->
+
+    <owl:ObjectProperty rdf:about="http://example.com/slowmo#IsAboutTemplate">
+        <rdfs:subPropertyOf rdf:resource="http://example.com/slowmo#IsAbout"/>
+        <rdfs:label xml:lang="en">is about template</rdfs:label>
+    </owl:ObjectProperty>
+    
 
 
     <!-- http://example.com/slowmo#IsAcceptableBy -->
@@ -83,7 +170,7 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
     <owl:ObjectProperty rdf:about="http://example.com/slowmo#IsAcceptableBy">
         <rdfs:label>is acceptable by</rdfs:label>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- http://example.com/slowmo#IsPromotedBy -->
@@ -91,7 +178,7 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
     <owl:ObjectProperty rdf:about="http://example.com/slowmo#IsPromotedBy">
         <rdfs:label>is promoted by</rdfs:label>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- http://example.com/slowmo#Uses -->
@@ -99,7 +186,7 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
     <owl:ObjectProperty rdf:about="http://example.com/slowmo#Uses">
         <rdfs:label>uses</rdfs:label>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- http://example.com/slowmo#UsesInterventionProperty -->
@@ -108,7 +195,7 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
         <rdfs:subPropertyOf rdf:resource="http://example.com/slowmo#Uses"/>
         <rdfs:label>uses intervention property</rdfs:label>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- http://purl.obolibrary.org/obo/RO_0000091 -->
@@ -118,37 +205,10 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
         <rdfs:comment>Imported from the Relation Ontology</rdfs:comment>
         <rdfs:label>has disposition</rdfs:label>
     </owl:ObjectProperty>
+    
 
 
-
-    <!-- http://example.com/slowmo#IsAboutISR -->
-
-    <owl:ObjectProperty rdf:about="http://example.com/slowmo#IsAboutISR">
-        <rdfs:subPropertyOf rdf:resource="http://example.com/slowmo#IsAbout"/>
-        <rdfs:label>is about ISR</rdfs:label>
-    </owl:ObjectProperty>
-
-
-
-    <!-- http://example.com/slowmo#IsAboutPerformer -->
-
-    <owl:ObjectProperty rdf:about="http://example.com/slowmo#IsAboutPerformer">
-        <rdfs:subPropertyOf rdf:resource="http://example.com/slowmo#IsAbout"/>
-        <rdfs:label>is about performer</rdfs:label>
-    </owl:ObjectProperty>
-
-
-
-    <!-- http://example.com/slowmo#IsAboutTemplate -->
-
-    <owl:ObjectProperty rdf:about="http://example.com/slowmo#IsAboutTemplate">
-        <rdfs:subPropertyOf rdf:resource="http://example.com/slowmo#IsAbout"/>
-        <rdfs:label xml:lang="en">is about template</rdfs:label>
-    </owl:ObjectProperty>
-
-
-
-    <!--
+    <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
     // Classes
@@ -156,7 +216,7 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-
+    
 
 
     <!-- http://example.com/slowmo#AddressCountry -->
@@ -165,7 +225,7 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
         <obo:IAO_0000115>Needed</obo:IAO_0000115>
         <rdfs:label>address country</rdfs:label>
     </owl:Class>
-
+    
 
 
     <!-- http://example.com/slowmo#AddressLocality -->
@@ -174,7 +234,7 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
         <obo:IAO_0000115>Needed</obo:IAO_0000115>
         <rdfs:label>address locality</rdfs:label>
     </owl:Class>
-
+    
 
 
     <!-- http://example.com/slowmo#AddressRegion -->
@@ -183,7 +243,7 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
         <obo:IAO_0000115></obo:IAO_0000115>
         <rdfs:label>address region</rdfs:label>
     </owl:Class>
-
+    
 
 
     <!-- http://example.com/slowmo#AncestorPerformer -->
@@ -192,7 +252,7 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
         <obo:IAO_0000115></obo:IAO_0000115>
         <rdfs:label>ancestor performer</rdfs:label>
     </owl:Class>
-
+    
 
 
     <!-- http://example.com/slowmo#AncestorTemplate -->
@@ -201,238 +261,7 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
         <obo:IAO_0000115></obo:IAO_0000115>
         <rdfs:label>ancestor template</rdfs:label>
     </owl:Class>
-
-
-
-    <!-- http://example.com/slowmo#DimensionCardinality -->
-
-    <owl:Class rdf:about="http://example.com/slowmo#DimensionCardinality">
-        <rdfs:label>dimension cardinality</rdfs:label>
-    </owl:Class>
-
-
-
-    <!-- http://example.com/slowmo#Figure -->
-
-    <owl:Class rdf:about="http://example.com/slowmo#Figure">
-        <rdfs:label>figure</rdfs:label>
-    </owl:Class>
-
-
-
-    <!-- http://example.com/slowmo#GapFigure -->
-
-    <owl:Class rdf:about="http://example.com/slowmo#GapFigure">
-        <rdfs:subClassOf rdf:resource="http://example.com/slowmo#Figure"/>
-        <rdfs:label>gap figure</rdfs:label>
-    </owl:Class>
-
-
-
-    <!-- http://example.com/slowmo#Guideline -->
-
-    <owl:Class rdf:about="http://example.com/slowmo#Guideline">
-        <rdfs:label>guideline</rdfs:label>
-    </owl:Class>
-
-
-
-    <!-- http://example.com/slowmo#InputTable -->
-
-    <owl:Class rdf:about="http://example.com/slowmo#InputTable">
-        <rdfs:label>input table</rdfs:label>
-    </owl:Class>
-
-
-
-    <!-- http://example.com/slowmo#MasteryPresent -->
-
-    <owl:Class rdf:about="http://example.com/slowmo#MasteryPresent">
-        <rdfs:label>mastery present</rdfs:label>
-    </owl:Class>
-
-
-
-    <!-- http://example.com/slowmo#MasteryUnknown -->
-
-    <owl:Class rdf:about="http://example.com/slowmo#MasteryUnknown">
-        <rdfs:label>mastery unknown</rdfs:label>
-    </owl:Class>
-
-
-
-    <!-- http://example.com/slowmo#Measure -->
-
-    <owl:Class rdf:about="http://example.com/slowmo#Measure">
-        <rdfs:label>measure</rdfs:label>
-    </owl:Class>
-
-
-
-    <!-- http://example.com/slowmo#MeasureCardinality -->
-
-    <owl:Class rdf:about="http://example.com/slowmo#MeasureCardinality">
-        <rdfs:subClassOf rdf:resource="http://example.com/slowmo#DimensionCardinality"/>
-        <rdfs:label>measure cardinality</rdfs:label>
-    </owl:Class>
-
-
-
-    <!-- http://example.com/slowmo#Name -->
-
-    <owl:Class rdf:about="http://example.com/slowmo#Name">
-        <rdfs:label>name</rdfs:label>
-    </owl:Class>
-
-
-
-    <!-- http://example.com/slowmo#NegativePerformanceGap -->
-
-    <owl:Class rdf:about="http://example.com/slowmo#NegativePerformanceGap">
-        <rdfs:subClassOf rdf:resource="http://example.com/slowmo#PerformanceGap"/>
-        <rdfs:label>negative performance gap</rdfs:label>
-    </owl:Class>
-
-
-
-    <!-- http://example.com/slowmo#PeerComparison -->
-
-    <owl:Class rdf:about="http://example.com/slowmo#PeerComparison">
-        <rdfs:label>peer comparison</rdfs:label>
-    </owl:Class>
-
-
-
-    <!-- http://example.com/slowmo#PerformanceCardinality -->
-
-    <owl:Class rdf:about="http://example.com/slowmo#PerformanceCardinality">
-        <rdfs:subClassOf rdf:resource="http://example.com/slowmo#DimensionCardinality"/>
-        <rdfs:label>performance cardinality</rdfs:label>
-    </owl:Class>
-
-
-
-    <!-- http://example.com/slowmo#PerformanceGap -->
-
-    <owl:Class rdf:about="http://example.com/slowmo#PerformanceGap">
-        <rdfs:label>performance gap</rdfs:label>
-    </owl:Class>
-
-
-
-    <!-- http://example.com/slowmo#PerformerCardinality -->
-
-    <owl:Class rdf:about="http://example.com/slowmo#PerformerCardinality">
-        <rdfs:subClassOf rdf:resource="http://example.com/slowmo#DimensionCardinality"/>
-        <rdfs:label>performer cardinality</rdfs:label>
-    </owl:Class>
-
-
-
-    <!-- http://example.com/slowmo#PositivePerformanceGap -->
-
-    <owl:Class rdf:about="http://example.com/slowmo#PositivePerformanceGap">
-        <rdfs:subClassOf rdf:resource="http://example.com/slowmo#PerformanceGap"/>
-        <rdfs:label>positive performance gap</rdfs:label>
-    </owl:Class>
-
-
-
-    <!-- http://example.com/slowmo#PostalCode -->
-
-    <owl:Class rdf:about="http://example.com/slowmo#PostalCode">
-        <obo:IAO_0000115>Needed</obo:IAO_0000115>
-        <rdfs:label>postal code</rdfs:label>
-    </owl:Class>
-
-
-
-    <!-- http://example.com/slowmo#RelatedLocation -->
-
-    <owl:Class rdf:about="http://example.com/slowmo#RelatedLocation">
-        <rdfs:subClassOf rdf:resource="http://example.com/slowmo#Location"/>
-        <rdfs:label>related location</rdfs:label>
-    </owl:Class>
-
-
-
-    <!-- http://example.com/slowmo#ShowsBigGap -->
-
-    <owl:Class rdf:about="http://example.com/slowmo#ShowsBigGap">
-        <rdfs:subClassOf rdf:resource="http://example.com/slowmo#ShowsGap"/>
-        <rdfs:label>shows big gap</rdfs:label>
-    </owl:Class>
-
-
-
-    <!-- http://example.com/slowmo#ShowsGap -->
-
-    <owl:Class rdf:about="http://example.com/slowmo#ShowsGap">
-        <rdfs:label>shows gap</rdfs:label>
-    </owl:Class>
-
-
-
-    <!-- http://example.com/slowmo#ShowsNegativeGap -->
-
-    <owl:Class rdf:about="http://example.com/slowmo#ShowsNegativeGap">
-        <rdfs:subClassOf rdf:resource="http://example.com/slowmo#ShowsGap"/>
-        <rdfs:label>shows negative gap</rdfs:label>
-    </owl:Class>
-
-
-
-    <!-- http://example.com/slowmo#ShowsPositiveGap -->
-
-    <owl:Class rdf:about="http://example.com/slowmo#ShowsPositiveGap">
-        <rdfs:subClassOf rdf:resource="http://example.com/slowmo#ShowsGap"/>
-        <rdfs:label>shows positive gap</rdfs:label>
-    </owl:Class>
-
-
-
-    <!-- http://example.com/slowmo#ShowsSmallGap -->
-
-    <owl:Class rdf:about="http://example.com/slowmo#ShowsSmallGap">
-        <rdfs:subClassOf rdf:resource="http://example.com/slowmo#ShowsGap"/>
-        <rdfs:label>shows small gap</rdfs:label>
-    </owl:Class>
-
-
-
-    <!-- http://example.com/slowmo#ShowsTrend -->
-
-    <owl:Class rdf:about="http://example.com/slowmo#ShowsTrend">
-        <rdfs:label>shows trend</rdfs:label>
-    </owl:Class>
-
-
-
-    <!-- http://example.com/slowmo#StreetAddress -->
-
-    <owl:Class rdf:about="http://example.com/slowmo#StreetAddress">
-        <obo:IAO_0000115>Needed</obo:IAO_0000115>
-        <rdfs:label>street address</rdfs:label>
-    </owl:Class>
-
-
-
-    <!-- http://example.com/slowmo#TimeCardinality -->
-
-    <owl:Class rdf:about="http://example.com/slowmo#TimeCardinality">
-        <rdfs:subClassOf rdf:resource="http://example.com/slowmo#DimensionCardinality"/>
-        <rdfs:label>time cardinality</rdfs:label>
-    </owl:Class>
-
-
-
-    <!-- http://example.com/slowmo#TrendFigure -->
-
-    <owl:Class rdf:about="http://example.com/slowmo#TrendFigure">
-        <rdfs:subClassOf rdf:resource="http://example.com/slowmo#Figure"/>
-        <rdfs:label>trend figure</rdfs:label>
-    </owl:Class>
-
+    
 
 
     <!-- http://example.com/slowmo#AppropriateCandidate -->
@@ -442,7 +271,7 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
         <obo:IAO_0000115>A candidate thats situation and template characteristics are complementary according to theory</obo:IAO_0000115>
         <rdfs:label xml:lang="en">appropriate candidate</rdfs:label>
     </owl:Class>
-
+    
 
 
     <!-- http://example.com/slowmo#BehaviorChangeIntervention -->
@@ -452,7 +281,7 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
         <rdfs:isDefinedBy>Michie S, Stralen MMV, West R. The behaviour change wheel: A new method for characterising and designing behaviour change interventions. Implementation Science. 2011;6(1).</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">behavior change intervention</rdfs:label>
     </owl:Class>
-
+    
 
 
     <!-- http://example.com/slowmo#Candidate -->
@@ -461,7 +290,7 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
         <obo:IAO_0000115>An independent continuant which represents the union of the features of a situation and those of a template</obo:IAO_0000115>
         <rdfs:label xml:lang="en">candidate</rdfs:label>
     </owl:Class>
-
+    
 
 
     <!-- http://example.com/slowmo#CapabilityBarrier -->
@@ -470,7 +299,7 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
         <obo:IAO_0000115>Definition Needed</obo:IAO_0000115>
         <rdfs:label>capability barrier</rdfs:label>
     </owl:Class>
-
+    
 
 
     <!-- http://example.com/slowmo#Delivery -->
@@ -480,7 +309,15 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
         <rdfs:comment>Adapted from West, R. and Michie, S. (2016). A Guide to Development and Evaluation of Digital Behavior Interventions in Healthcare. Silverback Publishing.</rdfs:comment>
         <rdfs:label xml:lang="en">delivery</rdfs:label>
     </owl:Class>
+    
 
+
+    <!-- http://example.com/slowmo#DimensionCardinality -->
+
+    <owl:Class rdf:about="http://example.com/slowmo#DimensionCardinality">
+        <rdfs:label>dimension cardinality</rdfs:label>
+    </owl:Class>
+    
 
 
     <!-- http://example.com/slowmo#DominantPerformanceBehaviorCapability -->
@@ -491,7 +328,40 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
         <obo:IAO_0000115>A capability realized when a performer is able to consistently carry out a performance behavior at a high level of excellence</obo:IAO_0000115>
         <rdfs:label xml:lang="en">dominant performance behavior capability</rdfs:label>
     </owl:Class>
+    
 
+
+    <!-- http://example.com/slowmo#Figure -->
+
+    <owl:Class rdf:about="http://example.com/slowmo#Figure">
+        <rdfs:label>figure</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com/slowmo#GapFigure -->
+
+    <owl:Class rdf:about="http://example.com/slowmo#GapFigure">
+        <rdfs:subClassOf rdf:resource="http://example.com/slowmo#Figure"/>
+        <rdfs:label>gap figure</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com/slowmo#Guideline -->
+
+    <owl:Class rdf:about="http://example.com/slowmo#Guideline">
+        <rdfs:label>guideline</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com/slowmo#InputTable -->
+
+    <owl:Class rdf:about="http://example.com/slowmo#InputTable">
+        <rdfs:label>input table</rdfs:label>
+    </owl:Class>
+    
 
 
     <!-- http://example.com/slowmo#InterventionSituationrRelationship -->
@@ -500,7 +370,7 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
         <obo:IAO_0000115>a causal pathway from an intervention to a situation</obo:IAO_0000115>
         <rdfs:label>intervention situation relationship</rdfs:label>
     </owl:Class>
-
+    
 
 
     <!-- http://example.com/slowmo#Location -->
@@ -509,7 +379,57 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
         <obo:IAO_0000115>def needed</obo:IAO_0000115>
         <rdfs:label xml:lang="en">location</rdfs:label>
     </owl:Class>
+    
 
+
+    <!-- http://example.com/slowmo#MasteryPresent -->
+
+    <owl:Class rdf:about="http://example.com/slowmo#MasteryPresent">
+        <rdfs:label>mastery present</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com/slowmo#MasteryUnknown -->
+
+    <owl:Class rdf:about="http://example.com/slowmo#MasteryUnknown">
+        <rdfs:label>mastery unknown</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com/slowmo#Measure -->
+
+    <owl:Class rdf:about="http://example.com/slowmo#Measure">
+        <rdfs:label>measure</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com/slowmo#MeasureCardinality -->
+
+    <owl:Class rdf:about="http://example.com/slowmo#MeasureCardinality">
+        <rdfs:subClassOf rdf:resource="http://example.com/slowmo#DimensionCardinality"/>
+        <rdfs:label>measure cardinality</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com/slowmo#Name -->
+
+    <owl:Class rdf:about="http://example.com/slowmo#Name">
+        <rdfs:label>name</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com/slowmo#NegativePerformanceGap -->
+
+    <owl:Class rdf:about="http://example.com/slowmo#NegativePerformanceGap">
+        <rdfs:subClassOf rdf:resource="http://example.com/slowmo#PerformanceGap"/>
+        <rdfs:label>negative performance gap</rdfs:label>
+    </owl:Class>
+    
 
 
     <!-- http://example.com/slowmo#NegativePerformanceSignal -->
@@ -519,7 +439,7 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
         <obo:IAO_0000115>A performance signal that indicates the performance is bad</obo:IAO_0000115>
         <rdfs:label>negative performance signal</rdfs:label>
     </owl:Class>
-
+    
 
 
     <!-- http://example.com/slowmo#NondominantPerformanceBehaviorCapability -->
@@ -529,7 +449,7 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
         <obo:IAO_0000115>A capability realized when a performer is not able to consistently carry out a performance behavior at a high level of excellence</obo:IAO_0000115>
         <rdfs:label xml:lang="en">nondominant performance behavior capability</rdfs:label>
     </owl:Class>
-
+    
 
 
     <!-- http://example.com/slowmo#NormativeComparator -->
@@ -538,7 +458,15 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
         <obo:IAO_0000115>Definition Needed</obo:IAO_0000115>
         <rdfs:label>normative comparator</rdfs:label>
     </owl:Class>
+    
 
+
+    <!-- http://example.com/slowmo#PeerComparison -->
+
+    <owl:Class rdf:about="http://example.com/slowmo#PeerComparison">
+        <rdfs:label>peer comparison</rdfs:label>
+    </owl:Class>
+    
 
 
     <!-- http://example.com/slowmo#Performance -->
@@ -547,7 +475,7 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
         <obo:IAO_0000115>a determinable quality that is dependant on human beings organizations and instantiated by measurement values of a behavior process</obo:IAO_0000115>
         <rdfs:label xml:lang="en">performance</rdfs:label>
     </owl:Class>
-
+    
 
 
     <!-- http://example.com/slowmo#PerformanceBehaviorcCapability -->
@@ -556,7 +484,24 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
         <obo:IAO_0000115>A capability realized in the process of performing a performance behavior</obo:IAO_0000115>
         <rdfs:label xml:lang="en">performance behavior capability</rdfs:label>
     </owl:Class>
+    
 
+
+    <!-- http://example.com/slowmo#PerformanceCardinality -->
+
+    <owl:Class rdf:about="http://example.com/slowmo#PerformanceCardinality">
+        <rdfs:subClassOf rdf:resource="http://example.com/slowmo#DimensionCardinality"/>
+        <rdfs:label>performance cardinality</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com/slowmo#PerformanceGap -->
+
+    <owl:Class rdf:about="http://example.com/slowmo#PerformanceGap">
+        <rdfs:label>performance gap</rdfs:label>
+    </owl:Class>
+    
 
 
     <!-- http://example.com/slowmo#PerformanceSignal -->
@@ -565,7 +510,25 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
         <obo:IAO_0000115>An indication of the state affairs of an accomplished behavior</obo:IAO_0000115>
         <rdfs:label>performance signal</rdfs:label>
     </owl:Class>
+    
 
+
+    <!-- http://example.com/slowmo#PerformerCardinality -->
+
+    <owl:Class rdf:about="http://example.com/slowmo#PerformerCardinality">
+        <rdfs:subClassOf rdf:resource="http://example.com/slowmo#DimensionCardinality"/>
+        <rdfs:label>performer cardinality</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com/slowmo#PositivePerformanceGap -->
+
+    <owl:Class rdf:about="http://example.com/slowmo#PositivePerformanceGap">
+        <rdfs:subClassOf rdf:resource="http://example.com/slowmo#PerformanceGap"/>
+        <rdfs:label>positive performance gap</rdfs:label>
+    </owl:Class>
+    
 
 
     <!-- http://example.com/slowmo#PositivePerformanceSignal -->
@@ -575,7 +538,16 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
         <obo:IAO_0000115>A performance signal that indicates the performance is good</obo:IAO_0000115>
         <rdfs:label>positive performance signal</rdfs:label>
     </owl:Class>
+    
 
+
+    <!-- http://example.com/slowmo#PostalCode -->
+
+    <owl:Class rdf:about="http://example.com/slowmo#PostalCode">
+        <obo:IAO_0000115>Needed</obo:IAO_0000115>
+        <rdfs:label>postal code</rdfs:label>
+    </owl:Class>
+    
 
 
     <!-- http://example.com/slowmo#PreventionFocus -->
@@ -585,7 +557,7 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
         <obo:IAO_0000115>definition needed</obo:IAO_0000115>
         <rdfs:label>prevention focus</rdfs:label>
     </owl:Class>
-
+    
 
 
     <!-- http://example.com/slowmo#PromotionFocus -->
@@ -595,7 +567,7 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
         <obo:IAO_0000115>Definition Needed</obo:IAO_0000115>
         <rdfs:label>promotion focus</rdfs:label>
     </owl:Class>
-
+    
 
 
     <!-- http://example.com/slowmo#RegulatoryFocus -->
@@ -604,7 +576,95 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
         <obo:IAO_0000115>a sensitivity of the recipient</obo:IAO_0000115>
         <rdfs:label>regulatory focus</rdfs:label>
     </owl:Class>
+    
 
+
+    <!-- http://example.com/slowmo#RelatedLocation -->
+
+    <owl:Class rdf:about="http://example.com/slowmo#RelatedLocation">
+        <rdfs:subClassOf rdf:resource="http://example.com/slowmo#Location"/>
+        <rdfs:label>related location</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com/slowmo#ShowsBigGap -->
+
+    <owl:Class rdf:about="http://example.com/slowmo#ShowsBigGap">
+        <rdfs:subClassOf rdf:resource="http://example.com/slowmo#ShowsGap"/>
+        <rdfs:label>shows big gap</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com/slowmo#ShowsGap -->
+
+    <owl:Class rdf:about="http://example.com/slowmo#ShowsGap">
+        <rdfs:label>shows gap</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com/slowmo#ShowsNegativeGap -->
+
+    <owl:Class rdf:about="http://example.com/slowmo#ShowsNegativeGap">
+        <rdfs:subClassOf rdf:resource="http://example.com/slowmo#ShowsGap"/>
+        <rdfs:label>shows negative gap</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com/slowmo#ShowsPositiveGap -->
+
+    <owl:Class rdf:about="http://example.com/slowmo#ShowsPositiveGap">
+        <rdfs:subClassOf rdf:resource="http://example.com/slowmo#ShowsGap"/>
+        <rdfs:label>shows positive gap</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com/slowmo#ShowsSmallGap -->
+
+    <owl:Class rdf:about="http://example.com/slowmo#ShowsSmallGap">
+        <rdfs:subClassOf rdf:resource="http://example.com/slowmo#ShowsGap"/>
+        <rdfs:label>shows small gap</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com/slowmo#ShowsTrend -->
+
+    <owl:Class rdf:about="http://example.com/slowmo#ShowsTrend">
+        <rdfs:label>shows trend</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com/slowmo#StreetAddress -->
+
+    <owl:Class rdf:about="http://example.com/slowmo#StreetAddress">
+        <obo:IAO_0000115>Needed</obo:IAO_0000115>
+        <rdfs:label>street address</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com/slowmo#TimeCardinality -->
+
+    <owl:Class rdf:about="http://example.com/slowmo#TimeCardinality">
+        <rdfs:subClassOf rdf:resource="http://example.com/slowmo#DimensionCardinality"/>
+        <rdfs:label>time cardinality</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com/slowmo#TrendFigure -->
+
+    <owl:Class rdf:about="http://example.com/slowmo#TrendFigure">
+        <rdfs:subClassOf rdf:resource="http://example.com/slowmo#Figure"/>
+        <rdfs:label>trend figure</rdfs:label>
+    </owl:Class>
+    
 
 
     <!-- http://example.com/slowmo#slowmo_0000010 -->
@@ -615,7 +675,7 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">obsolete behavior</rdfs:label>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
-
+    
 
 
     <!-- http://example.com/slowmo#slowmo_0000024 -->
@@ -627,7 +687,7 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">obsolete setting</rdfs:label>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
-
+    
 
 
     <!-- http://example.com/slowmo#slowmo_0000035 -->
@@ -638,7 +698,7 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">obsolete appraisal of performance behavior</rdfs:label>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
-
+    
 
 
     <!-- http://example.com/slowmo#slowmo_0000142 -->
@@ -647,7 +707,7 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">obsolete legacy terms</rdfs:label>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
-
+    
 
 
     <!-- http://example.com/slowmo#spek -->
@@ -656,8 +716,175 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
         <obo:IAO_0000115>def needed</obo:IAO_0000115>
         <rdfs:label xml:lang="en">spek</rdfs:label>
     </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/">
+        <terms:publisher rdf:resource="http://purl.org/dc/aboutdcmi#DCMI"/>
+        <terms:title xml:lang="en">Dublin Core Metadata Element Set, Version 1.1</terms:title>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2012-06-14</terms:modified>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/contributor">
+        <rdfs:label xml:lang="en">Contributor</rdfs:label>
+        <skos:note xml:lang="en">A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document &quot;DCMI Metadata Terms&quot; (http://dublincore.org/documents/dcmi-terms/) for an explanation.</skos:note>
+        <terms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#contributor-006"/>
+        <rdfs:comment xml:lang="en">An entity responsible for making contributions to the resource.</rdfs:comment>
+        <terms:description xml:lang="en">Examples of a Contributor include a person, an organization, or a service. Typically, the name of a Contributor should be used to indicate the entity.</terms:description>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</terms:modified>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-07-02</terms:issued>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/coverage">
+        <terms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#coverage-006"/>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</terms:modified>
+        <skos:note xml:lang="en">A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document &quot;DCMI Metadata Terms&quot; (http://dublincore.org/documents/dcmi-terms/) for an explanation.</skos:note>
+        <rdfs:comment xml:lang="en">The spatial or temporal topic of the resource, the spatial applicability of the resource, or the jurisdiction under which the resource is relevant.</rdfs:comment>
+        <terms:description xml:lang="en">Spatial topic and spatial applicability may be a named place or a location specified by its geographic coordinates. Temporal topic may be a named period, date, or date range. A jurisdiction may be a named administrative entity or a geographic place to which the resource applies. Recommended best practice is to use a controlled vocabulary such as the Thesaurus of Geographic Names [TGN]. Where appropriate, named places or time periods can be used in preference to numeric identifiers such as sets of coordinates or date ranges.</terms:description>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-07-02</terms:issued>
+        <rdfs:label xml:lang="en">Coverage</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/creator">
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</terms:modified>
+        <rdfs:label xml:lang="en">Creator</rdfs:label>
+        <rdfs:comment xml:lang="en">An entity primarily responsible for making the resource.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
+        <terms:description xml:lang="en">Examples of a Creator include a person, an organization, or a service. Typically, the name of a Creator should be used to indicate the entity.</terms:description>
+        <terms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#creator-006"/>
+        <skos:note xml:lang="en">A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document &quot;DCMI Metadata Terms&quot; (http://dublincore.org/documents/dcmi-terms/) for an explanation.</skos:note>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-07-02</terms:issued>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/date">
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-07-02</terms:issued>
+        <skos:note xml:lang="en">A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document &quot;DCMI Metadata Terms&quot; (http://dublincore.org/documents/dcmi-terms/) for an explanation.</skos:note>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</terms:modified>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
+        <terms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#date-006"/>
+        <rdfs:comment xml:lang="en">A point or period of time associated with an event in the lifecycle of the resource.</rdfs:comment>
+        <terms:description xml:lang="en">Date may be used to express temporal information at any level of granularity.  Recommended best practice is to use an encoding scheme, such as the W3CDTF profile of ISO 8601 [W3CDTF].</terms:description>
+        <rdfs:label xml:lang="en">Date</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/description">
+        <terms:description xml:lang="en">Description may include but is not limited to: an abstract, a table of contents, a graphical representation, or a free-text account of the resource.</terms:description>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-07-02</terms:issued>
+        <skos:note xml:lang="en">A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document &quot;DCMI Metadata Terms&quot; (http://dublincore.org/documents/dcmi-terms/) for an explanation.</skos:note>
+        <rdfs:comment xml:lang="en">An account of the resource.</rdfs:comment>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</terms:modified>
+        <rdfs:label xml:lang="en">Description</rdfs:label>
+        <terms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#description-006"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/format">
+        <skos:note xml:lang="en">A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document &quot;DCMI Metadata Terms&quot; (http://dublincore.org/documents/dcmi-terms/) for an explanation.</skos:note>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-07-02</terms:issued>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</terms:modified>
+        <rdfs:label xml:lang="en">Format</rdfs:label>
+        <rdfs:comment xml:lang="en">The file format, physical medium, or dimensions of the resource.</rdfs:comment>
+        <terms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#format-007"/>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
+        <terms:description xml:lang="en">Examples of dimensions include size and duration. Recommended best practice is to use a controlled vocabulary such as the list of Internet Media Types [MIME].</terms:description>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/identifier">
+        <terms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#identifier-006"/>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
+        <terms:description xml:lang="en">Recommended best practice is to identify the resource by means of a string conforming to a formal identification system. </terms:description>
+        <rdfs:comment xml:lang="en">An unambiguous reference to the resource within a given context.</rdfs:comment>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-07-02</terms:issued>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</terms:modified>
+        <rdfs:label xml:lang="en">Identifier</rdfs:label>
+        <skos:note xml:lang="en">A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document &quot;DCMI Metadata Terms&quot; (http://dublincore.org/documents/dcmi-terms/) for an explanation.</skos:note>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/language">
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</terms:modified>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-07-02</terms:issued>
+        <skos:note xml:lang="en">A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document &quot;DCMI Metadata Terms&quot; (http://dublincore.org/documents/dcmi-terms/) for an explanation.</skos:note>
+        <rdfs:label xml:lang="en">Language</rdfs:label>
+        <terms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#language-007"/>
+        <terms:description xml:lang="en">Recommended best practice is to use a controlled vocabulary such as RFC 4646 [RFC4646].</terms:description>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
+        <rdfs:comment xml:lang="en">A language of the resource.</rdfs:comment>
+        <rdfs:seeAlso rdf:resource="http://www.ietf.org/rfc/rfc4646.txt"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/publisher">
+        <terms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#publisher-006"/>
+        <skos:note xml:lang="en">A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document &quot;DCMI Metadata Terms&quot; (http://dublincore.org/documents/dcmi-terms/) for an explanation.</skos:note>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-07-02</terms:issued>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</terms:modified>
+        <rdfs:label xml:lang="en">Publisher</rdfs:label>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
+        <terms:description xml:lang="en">Examples of a Publisher include a person, an organization, or a service. Typically, the name of a Publisher should be used to indicate the entity.</terms:description>
+        <rdfs:comment xml:lang="en">An entity responsible for making the resource available.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/relation">
+        <terms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#relation-006"/>
+        <terms:description xml:lang="en">Recommended best practice is to identify the related resource by means of a string conforming to a formal identification system. </terms:description>
+        <rdfs:label xml:lang="en">Relation</rdfs:label>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</terms:modified>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-07-02</terms:issued>
+        <skos:note xml:lang="en">A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document &quot;DCMI Metadata Terms&quot; (http://dublincore.org/documents/dcmi-terms/) for an explanation.</skos:note>
+        <rdfs:comment xml:lang="en">A related resource.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/rights">
+        <terms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#rights-006"/>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
+        <skos:note xml:lang="en">A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document &quot;DCMI Metadata Terms&quot; (http://dublincore.org/documents/dcmi-terms/) for an explanation.</skos:note>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-07-02</terms:issued>
+        <terms:description xml:lang="en">Typically, rights information includes a statement about various property rights associated with the resource, including intellectual property rights.</terms:description>
+        <rdfs:label xml:lang="en">Rights</rdfs:label>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</terms:modified>
+        <rdfs:comment xml:lang="en">Information about rights held in and over the resource.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/source">
+        <terms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#source-006"/>
+        <skos:note xml:lang="en">A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document &quot;DCMI Metadata Terms&quot; (http://dublincore.org/documents/dcmi-terms/) for an explanation.</skos:note>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
+        <rdfs:comment xml:lang="en">A related resource from which the described resource is derived.</rdfs:comment>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</terms:modified>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-07-02</terms:issued>
+        <terms:description xml:lang="en">The described resource may be derived from the related resource in whole or in part. Recommended best practice is to identify the related resource by means of a string conforming to a formal identification system.</terms:description>
+        <rdfs:label xml:lang="en">Source</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/subject">
+        <terms:description xml:lang="en">Typically, the subject will be represented using keywords, key phrases, or classification codes. Recommended best practice is to use a controlled vocabulary.</terms:description>
+        <skos:note xml:lang="en">A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document &quot;DCMI Metadata Terms&quot; (http://dublincore.org/documents/dcmi-terms/) for an explanation.</skos:note>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-07-02</terms:issued>
+        <rdfs:label xml:lang="en">Subject</rdfs:label>
+        <rdfs:comment xml:lang="en">The topic of the resource.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2012-06-14</terms:modified>
+        <terms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#subject-007"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/title">
+        <rdfs:comment xml:lang="en">A name given to the resource.</rdfs:comment>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</terms:modified>
+        <skos:note xml:lang="en">A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document &quot;DCMI Metadata Terms&quot; (http://dublincore.org/documents/dcmi-terms/) for an explanation.</skos:note>
+        <rdfs:label xml:lang="en">Title</rdfs:label>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-07-02</terms:issued>
+        <terms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#title-006"/>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/type">
+        <rdfs:comment xml:lang="en">The nature or genre of the resource.</rdfs:comment>
+        <terms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#type-006"/>
+        <rdfs:label xml:lang="en">Type</rdfs:label>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
+        <terms:description xml:lang="en">Recommended best practice is to use a controlled vocabulary such as the DCMI Type Vocabulary [DCMITYPE]. To describe the file format, physical medium, or dimensions of the resource, use the Format element.</terms:description>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-07-02</terms:issued>
+        <skos:note xml:lang="en">A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document &quot;DCMI Metadata Terms&quot; (http://dublincore.org/documents/dcmi-terms/) for an explanation.</skos:note>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-01-14</terms:modified>
+    </rdf:Description>
 </rdf:RDF>
 
 
 
 <!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+
