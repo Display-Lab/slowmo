@@ -2,13 +2,17 @@
 <rdf:RDF xmlns="http://www.semanticweb.org/milk/ontologies/2018/5/untitled-ontology-22#"
      xml:base="http://www.semanticweb.org/milk/ontologies/2018/5/untitled-ontology-22"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:terms="http://purl.org/dc/terms/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:obo="http://purl.obolibrary.org/obo/"
-     xmlns:efo="http://www.ebi.ac.uk/efo/">
-    <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/slowmo">
+     xmlns:efo="http://www.ebi.ac.uk/efo/"
+     xmlns:csvw="http://www.w3.org/ns/csvw#">
+    <owl:Ontology rdf:about="http://example.com/slowmo">
+        <owl:imports rdf:resource="http://www.w3.org/ns/csvw#"/>
         <rdfs:comment>The ontology content is licensed under a Creative Commons Attribution 4.0 International License.
 
 ### Source Code
@@ -25,10 +29,10 @@ distributed under the License is distributed on an &amp;quot;AS IS&amp;quot; BAS
 WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License</rdfs:comment>
         <rdfs:comment>slomo is a working ontology-like structure in .owl used to define meta-terms, working-in-progress terms and IRIs needed for other knowledge-base processes. There is no import structure and currently no external dependancies.</rdfs:comment>
     </owl:Ontology>
-    
 
 
-    <!-- 
+
+    <!--
     ///////////////////////////////////////////////////////////////////////////////////////
     //
     // Annotation properties
@@ -36,40 +40,78 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    
+
 
 
     <!-- http://purl.obolibrary.org/obo/IAO_0000115 -->
 
-    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000115"/>
-    
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000115">
+        <rdfs:comment>Imported from the Information Artifact Ontology</rdfs:comment>
+        <rdfs:label>definition</rdfs:label>
+    </owl:AnnotationProperty>
 
 
-    <!-- http://purl.obolibrary.org/obo/IAO_0000116 -->
 
-    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000116"/>
-    
+    <!-- http://purl.org/dc/terms/description -->
 
-
-    <!-- http://purl.obolibrary.org/obo/IAO_0000117 -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000117"/>
-    
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/description"/>
 
 
-    <!-- http://purl.obolibrary.org/obo/IAO_0000119 -->
 
-    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000119"/>
-    
+    <!-- http://purl.org/dc/terms/hasVersion -->
 
-
-    <!-- http://www.ebi.ac.uk/efo/definition -->
-
-    <owl:AnnotationProperty rdf:about="http://www.ebi.ac.uk/efo/definition"/>
-    
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/hasVersion"/>
 
 
-    <!-- 
+
+    <!-- http://purl.org/dc/terms/issued -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/issued"/>
+
+
+
+    <!-- http://purl.org/dc/terms/modified -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/modified"/>
+
+
+
+    <!-- http://purl.org/dc/terms/publisher -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/publisher"/>
+
+
+
+    <!-- http://purl.org/dc/terms/title -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/title"/>
+
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#note -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#note"/>
+
+
+
+    <!--
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#date -->
+
+    <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#date"/>
+
+
+
+    <!--
     ///////////////////////////////////////////////////////////////////////////////////////
     //
     // Object Properties
@@ -77,46 +119,96 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    
 
 
-    <!-- http://purl.obolibrary.org/obo/BFO_0000050 -->
 
-    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/BFO_0000050"/>
-    
+    <!-- http://example.com/slowmo#HasCandidate -->
 
-
-    <!-- http://purl.obolibrary.org/obo/RO_0002434 -->
-
-    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0002434"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/slowmo#slowmo_0000001 -->
-
-    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/slowmo#slowmo_0000001">
-        <rdfs:label>is_about_performers</rdfs:label>
+    <owl:ObjectProperty rdf:about="http://example.com/slowmo#HasCandidate">
+        <rdfs:label>has candidate</rdfs:label>
     </owl:ObjectProperty>
-    
 
 
-    <!-- http://purl.obolibrary.org/obo/slowmo#slowmo_0000002 -->
 
-    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/slowmo#slowmo_0000002">
-        <rdfs:label>is_about_ISRs</rdfs:label>
+    <!-- http://example.com/slowmo#IsAbout -->
+
+    <owl:ObjectProperty rdf:about="http://example.com/slowmo#IsAbout">
+        <rdfs:label>is about</rdfs:label>
     </owl:ObjectProperty>
-    
 
 
-    <!-- http://purl.obolibrary.org/obo/slowmo#slowmo_0000003 -->
 
-    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/slowmo#slowmo_0000003">
-        <rdfs:label xml:lang="en">is_about_templates</rdfs:label>
+    <!-- http://example.com/slowmo#IsAboutISR -->
+
+    <owl:ObjectProperty rdf:about="http://example.com/slowmo#IsAboutISR">
+        <rdfs:subPropertyOf rdf:resource="http://example.com/slowmo#IsAbout"/>
+        <rdfs:label>is about ISR</rdfs:label>
     </owl:ObjectProperty>
-    
 
 
-    <!-- 
+
+    <!-- http://example.com/slowmo#IsAboutPerformer -->
+
+    <owl:ObjectProperty rdf:about="http://example.com/slowmo#IsAboutPerformer">
+        <rdfs:subPropertyOf rdf:resource="http://example.com/slowmo#IsAbout"/>
+        <rdfs:label>is about performer</rdfs:label>
+    </owl:ObjectProperty>
+
+
+
+    <!-- http://example.com/slowmo#IsAboutTemplate -->
+
+    <owl:ObjectProperty rdf:about="http://example.com/slowmo#IsAboutTemplate">
+        <rdfs:subPropertyOf rdf:resource="http://example.com/slowmo#IsAbout"/>
+        <rdfs:label xml:lang="en">is about template</rdfs:label>
+    </owl:ObjectProperty>
+
+
+
+    <!-- http://example.com/slowmo#IsAcceptableBy -->
+
+    <owl:ObjectProperty rdf:about="http://example.com/slowmo#IsAcceptableBy">
+        <rdfs:label>is acceptable by</rdfs:label>
+    </owl:ObjectProperty>
+
+
+
+    <!-- http://example.com/slowmo#IsPromotedBy -->
+
+    <owl:ObjectProperty rdf:about="http://example.com/slowmo#IsPromotedBy">
+        <rdfs:label>is promoted by</rdfs:label>
+    </owl:ObjectProperty>
+
+
+
+    <!-- http://example.com/slowmo#Uses -->
+
+    <owl:ObjectProperty rdf:about="http://example.com/slowmo#Uses">
+        <rdfs:label>uses</rdfs:label>
+    </owl:ObjectProperty>
+
+
+
+    <!-- http://example.com/slowmo#UsesInterventionProperty -->
+
+    <owl:ObjectProperty rdf:about="http://example.com/slowmo#UsesInterventionProperty">
+        <rdfs:subPropertyOf rdf:resource="http://example.com/slowmo#Uses"/>
+        <rdfs:label>uses intervention property</rdfs:label>
+    </owl:ObjectProperty>
+
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0000091 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0000091">
+        <obo:IAO_0000115>A relation between an independent continuant (the bearer) and a disposition, in which the disposition specifically depends on the bearer for its existence.</obo:IAO_0000115>
+        <rdfs:comment>Imported from the Relation Ontology</rdfs:comment>
+        <rdfs:label>has disposition</rdfs:label>
+    </owl:ObjectProperty>
+
+
+
+    <!--
     ///////////////////////////////////////////////////////////////////////////////////////
     //
     // Classes
@@ -124,246 +216,520 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    
 
 
-    <!-- http://purl.obolibrary.org/obo/slowmo#slowmo_0000007 -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/slowmo#slowmo_0000007">
-        <obo:IAO_0000115>A coordinated set of activities designed to change specified behaviour patterns</obo:IAO_0000115>
-        <obo:IAO_0000117>John Rincón</obo:IAO_0000117>
-        <obo:IAO_0000119>Michie S, Stralen MMV, West R. The behaviour change wheel: A new method for characterising and designing behaviour change interventions. Implementation Science. 2011;6(1).</obo:IAO_0000119>
-        <rdfs:label xml:lang="en">behavior change intervention</rdfs:label>
+    <!-- http://example.com/slowmo#AddressCountry -->
+
+    <owl:Class rdf:about="http://example.com/slowmo#AddressCountry">
+        <obo:IAO_0000115>Needed</obo:IAO_0000115>
+        <rdfs:label>address country</rdfs:label>
     </owl:Class>
-    
 
 
-    <!-- http://purl.obolibrary.org/obo/slowmo#slowmo_0000010 -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/slowmo#slowmo_0000010">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/slowmo#slowmo_0000142"/>
-        <obo:IAO_0000115>a measurable action that is engaged in by a performer</obo:IAO_0000115>
-        <obo:IAO_0000117 xml:lang="en">John Rincón</obo:IAO_0000117>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">obsolete behavior</rdfs:label>
-        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+    <!-- http://example.com/slowmo#AddressLocality -->
+
+    <owl:Class rdf:about="http://example.com/slowmo#AddressLocality">
+        <obo:IAO_0000115>Needed</obo:IAO_0000115>
+        <rdfs:label>address locality</rdfs:label>
     </owl:Class>
-    
 
 
-    <!-- http://purl.obolibrary.org/obo/slowmo#slowmo_0000024 -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/slowmo#slowmo_0000024">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/slowmo#slowmo_0000142"/>
-        <obo:IAO_0000115>The social and physical environment in which an intervention takes place.</obo:IAO_0000115>
-        <obo:IAO_0000117>John Rincón</obo:IAO_0000117>
-        <obo:IAO_0000119>Adapted from West, R. and Michie, S. (2016). A Guide to Development and Evaluation of Digital Behavior Interventions in Healthcare. Silverback Publishing.</obo:IAO_0000119>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">obsolete setting</rdfs:label>
-        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+    <!-- http://example.com/slowmo#AddressRegion -->
+
+    <owl:Class rdf:about="http://example.com/slowmo#AddressRegion">
+        <obo:IAO_0000115></obo:IAO_0000115>
+        <rdfs:label>address region</rdfs:label>
     </owl:Class>
-    
 
 
-    <!-- http://purl.obolibrary.org/obo/slowmo#slowmo_0000025 -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/slowmo#slowmo_0000025">
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/slowmo#slowmo_0000007"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <obo:IAO_0000115>The medium through, and style in which, feedback is given to a performer</obo:IAO_0000115>
-        <obo:IAO_0000117>John Rincón</obo:IAO_0000117>
-        <obo:IAO_0000119>Adapted from West, R. and Michie, S. (2016). A Guide to Development and Evaluation of Digital Behavior Interventions in Healthcare. Silverback Publishing.</obo:IAO_0000119>
-        <rdfs:label xml:lang="en">delivery</rdfs:label>
+    <!-- http://example.com/slowmo#AncestorPerformer -->
+
+    <owl:Class rdf:about="http://example.com/slowmo#AncestorPerformer">
+        <obo:IAO_0000115></obo:IAO_0000115>
+        <rdfs:label>ancestor performer</rdfs:label>
     </owl:Class>
-    
 
 
-    <!-- http://purl.obolibrary.org/obo/slowmo#slowmo_0000035 -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/slowmo#slowmo_0000035">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/slowmo#slowmo_0000142"/>
-        <obo:IAO_0000117>John Rincón</obo:IAO_0000117>
-        <efo:definition>An appraisal with represent the performance behavior.</efo:definition>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">obsolete appraisal of performance behavior</rdfs:label>
-        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+    <!-- http://example.com/slowmo#AncestorTemplate -->
+
+    <owl:Class rdf:about="http://example.com/slowmo#AncestorTemplate">
+        <obo:IAO_0000115></obo:IAO_0000115>
+        <rdfs:label>ancestor template</rdfs:label>
     </owl:Class>
-    
 
 
-    <!-- http://purl.obolibrary.org/obo/slowmo#slowmo_0000085 -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/slowmo#slowmo_0000085">
-        <efo:definition>A capability realized in the process of performing a performance behavior</efo:definition>
-        <rdfs:label xml:lang="en">performance behavior capability</rdfs:label>
-    </owl:Class>
-    
+    <!-- http://example.com/slowmo#AppropriateCandidate -->
 
-
-    <!-- http://purl.obolibrary.org/obo/slowmo#slowmo_0000086 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/slowmo#slowmo_0000086">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/slowmo#slowmo_0000085"/>
-        <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/slowmo#slowmo_0000087"/>
-        <efo:definition>A capability realized when a performer is able to consistently carry out a performance behavior at a high level of excellence</efo:definition>
-        <rdfs:label xml:lang="en">dominant performance behavior capability</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/slowmo#slowmo_0000087 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/slowmo#slowmo_0000087">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/slowmo#slowmo_0000085"/>
-        <efo:definition>A capability realized when a performer is not able to consistently carry out a performance behavior at a high level of excellence</efo:definition>
-        <rdfs:label xml:lang="en">nondominant performance behavior capability</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/slowmo#slowmo_0000088 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/slowmo#slowmo_0000088">
-        <efo:definition>An independent continuant which represents the union of the features of a situation and those of a template</efo:definition>
-        <rdfs:label xml:lang="en">candidate</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/slowmo#slowmo_0000089 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/slowmo#slowmo_0000089">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/slowmo#slowmo_0000088"/>
-        <obo:IAO_0000116>This is as opposed to &quot;Naughty_Candidate&quot;, which is an innappropriate candidate that would probably create inappropriate mischief.  Again according to psychological theory</obo:IAO_0000116>
-        <obo:IAO_0000117>John Rincón</obo:IAO_0000117>
-        <efo:definition>A candidate thats situation and template characteristics are complementary according to theory</efo:definition>
+    <owl:Class rdf:about="http://example.com/slowmo#AppropriateCandidate">
+        <rdfs:subClassOf rdf:resource="http://example.com/slowmo#Candidate"/>
+        <obo:IAO_0000115>A candidate thats situation and template characteristics are complementary according to theory</obo:IAO_0000115>
         <rdfs:label xml:lang="en">appropriate candidate</rdfs:label>
     </owl:Class>
-    
 
 
-    <!-- http://purl.obolibrary.org/obo/slowmo#slowmo_0000118 -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/slowmo#slowmo_0000118">
-        <obo:IAO_0000115>a sensitivity of the recipient</obo:IAO_0000115>
-        <rdfs:label>regulatory focus</rdfs:label>
+    <!-- http://example.com/slowmo#BehaviorChangeIntervention -->
+
+    <owl:Class rdf:about="http://example.com/slowmo#BehaviorChangeIntervention">
+        <obo:IAO_0000115>A coordinated set of activities designed to change specified behaviour patterns</obo:IAO_0000115>
+        <rdfs:isDefinedBy>Michie S, Stralen MMV, West R. The behaviour change wheel: A new method for characterising and designing behaviour change interventions. Implementation Science. 2011;6(1).</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">behavior change intervention</rdfs:label>
     </owl:Class>
-    
 
 
-    <!-- http://purl.obolibrary.org/obo/slowmo#slowmo_0000119 -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/slowmo#slowmo_0000119">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/slowmo#slowmo_0000118"/>
-        <obo:IAO_0000115>definition needed</obo:IAO_0000115>
-        <rdfs:label>prevention focus</rdfs:label>
+    <!-- http://example.com/slowmo#Candidate -->
+
+    <owl:Class rdf:about="http://example.com/slowmo#Candidate">
+        <obo:IAO_0000115>An independent continuant which represents the union of the features of a situation and those of a template</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">candidate</rdfs:label>
     </owl:Class>
-    
 
 
-    <!-- http://purl.obolibrary.org/obo/slowmo#slowmo_0000120 -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/slowmo#slowmo_0000120">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/slowmo#slowmo_0000118"/>
-        <obo:IAO_0000115>Definition Needed</obo:IAO_0000115>
-        <rdfs:label>promotion focus</rdfs:label>
-    </owl:Class>
-    
+    <!-- http://example.com/slowmo#CapabilityBarrier -->
 
-
-    <!-- http://purl.obolibrary.org/obo/slowmo#slowmo_0000125 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/slowmo#slowmo_0000125">
-        <obo:IAO_0000115>An indication of the state affairs of an accomplished behavior</obo:IAO_0000115>
-        <rdfs:label>performance signal</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/slowmo#slowmo_0000126 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/slowmo#slowmo_0000126">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/slowmo#slowmo_0000125"/>
-        <obo:IAO_0000115>A performance signal that indicates the performance is bad</obo:IAO_0000115>
-        <rdfs:label>negative signal</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/slowmo#slowmo_0000127 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/slowmo#slowmo_0000127">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/slowmo#slowmo_0000125"/>
-        <obo:IAO_0000115>A performance signal that indicates the performance is good</obo:IAO_0000115>
-        <rdfs:label>positive signal</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/slowmo#slowmo_0000132 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/slowmo#slowmo_0000132">
+    <owl:Class rdf:about="http://example.com/slowmo#CapabilityBarrier">
         <obo:IAO_0000115>Definition Needed</obo:IAO_0000115>
         <rdfs:label>capability barrier</rdfs:label>
     </owl:Class>
-    
 
 
-    <!-- http://purl.obolibrary.org/obo/slowmo#slowmo_0000134 -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/slowmo#slowmo_0000134">
-        <obo:IAO_0000115>Definition Needed</obo:IAO_0000115>
-        <rdfs:label>normative comparator</rdfs:label>
+    <!-- http://example.com/slowmo#Delivery -->
+
+    <owl:Class rdf:about="http://example.com/slowmo#Delivery">
+        <obo:IAO_0000115>The medium through, and style in which, feedback is given to a performer</obo:IAO_0000115>
+        <rdfs:comment>Adapted from West, R. and Michie, S. (2016). A Guide to Development and Evaluation of Digital Behavior Interventions in Healthcare. Silverback Publishing.</rdfs:comment>
+        <rdfs:label xml:lang="en">delivery</rdfs:label>
     </owl:Class>
-    
 
 
-    <!-- http://purl.obolibrary.org/obo/slowmo#slowmo_0000135 -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/slowmo#slowmo_0000135">
+    <!-- http://example.com/slowmo#DimensionCardinality -->
+
+    <owl:Class rdf:about="http://example.com/slowmo#DimensionCardinality">
+        <rdfs:label>dimension cardinality</rdfs:label>
+    </owl:Class>
+
+
+
+    <!-- http://example.com/slowmo#DominantPerformanceBehaviorCapability -->
+
+    <owl:Class rdf:about="http://example.com/slowmo#DominantPerformanceBehaviorCapability">
+        <rdfs:subClassOf rdf:resource="http://example.com/slowmo#PerformanceBehaviorcCapability"/>
+        <owl:disjointWith rdf:resource="http://example.com/slowmo#NondominantPerformanceBehaviorCapability"/>
+        <obo:IAO_0000115>A capability realized when a performer is able to consistently carry out a performance behavior at a high level of excellence</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">dominant performance behavior capability</rdfs:label>
+    </owl:Class>
+
+
+
+    <!-- http://example.com/slowmo#Figure -->
+
+    <owl:Class rdf:about="http://example.com/slowmo#Figure">
+        <rdfs:label>figure</rdfs:label>
+    </owl:Class>
+
+
+
+    <!-- http://example.com/slowmo#GapFigure -->
+
+    <owl:Class rdf:about="http://example.com/slowmo#GapFigure">
+        <rdfs:subClassOf rdf:resource="http://example.com/slowmo#Figure"/>
+        <rdfs:label>gap figure</rdfs:label>
+    </owl:Class>
+
+
+
+    <!-- http://example.com/slowmo#Guideline -->
+
+    <owl:Class rdf:about="http://example.com/slowmo#Guideline">
+        <rdfs:label>guideline</rdfs:label>
+    </owl:Class>
+
+
+
+    <!-- http://example.com/slowmo#InputTable -->
+
+    <owl:Class rdf:about="http://example.com/slowmo#InputTable">
+        <rdfs:label>input table</rdfs:label>
+    </owl:Class>
+
+
+
+    <!-- http://example.com/slowmo#InterventionSituationrRelationship -->
+
+    <owl:Class rdf:about="http://example.com/slowmo#InterventionSituationrRelationship">
         <obo:IAO_0000115>a causal pathway from an intervention to a situation</obo:IAO_0000115>
         <rdfs:label>intervention situation relationship</rdfs:label>
     </owl:Class>
-    
 
 
-    <!-- http://purl.obolibrary.org/obo/slowmo#slowmo_0000139 -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/slowmo#slowmo_0000139">
-        <obo:IAO_0000115>a determinable quality that is dependant on human beings organizations and instantiated by measurement values of a behavior process</obo:IAO_0000115>
-        <rdfs:label xml:lang="en">performance</rdfs:label>
-    </owl:Class>
-    
+    <!-- http://example.com/slowmo#Location -->
 
-
-    <!-- http://purl.obolibrary.org/obo/slowmo#slowmo_0000140 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/slowmo#slowmo_0000140">
-        <obo:IAO_0000115>def needed</obo:IAO_0000115>
-        <rdfs:label xml:lang="en">spek</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/slowmo#slowmo_0000141 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/slowmo#slowmo_0000141">
+    <owl:Class rdf:about="http://example.com/slowmo#Location">
         <obo:IAO_0000115>def needed</obo:IAO_0000115>
         <rdfs:label xml:lang="en">location</rdfs:label>
     </owl:Class>
-    
 
 
-    <!-- http://purl.obolibrary.org/obo/slowmo#slowmo_0000142 -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/slowmo#slowmo_0000142">
+    <!-- http://example.com/slowmo#MasteryPresent -->
+
+    <owl:Class rdf:about="http://example.com/slowmo#MasteryPresent">
+        <rdfs:label>mastery present</rdfs:label>
+    </owl:Class>
+
+
+
+    <!-- http://example.com/slowmo#MasteryUnknown -->
+
+    <owl:Class rdf:about="http://example.com/slowmo#MasteryUnknown">
+        <rdfs:label>mastery unknown</rdfs:label>
+    </owl:Class>
+
+
+
+    <!-- http://example.com/slowmo#Measure -->
+
+    <owl:Class rdf:about="http://example.com/slowmo#Measure">
+        <rdfs:label>measure</rdfs:label>
+    </owl:Class>
+
+
+
+    <!-- http://example.com/slowmo#MeasureCardinality -->
+
+    <owl:Class rdf:about="http://example.com/slowmo#MeasureCardinality">
+        <rdfs:subClassOf rdf:resource="http://example.com/slowmo#DimensionCardinality"/>
+        <rdfs:label>measure cardinality</rdfs:label>
+    </owl:Class>
+
+
+
+    <!-- http://example.com/slowmo#Name -->
+
+    <owl:Class rdf:about="http://example.com/slowmo#Name">
+        <rdfs:label>name</rdfs:label>
+    </owl:Class>
+
+
+
+    <!-- http://example.com/slowmo#NegativePerformanceGap -->
+
+    <owl:Class rdf:about="http://example.com/slowmo#NegativePerformanceGap">
+        <rdfs:subClassOf rdf:resource="http://example.com/slowmo#PerformanceGap"/>
+        <rdfs:label>negative performance gap</rdfs:label>
+    </owl:Class>
+
+
+
+    <!-- http://example.com/slowmo#NegativePerformanceSignal -->
+
+    <owl:Class rdf:about="http://example.com/slowmo#NegativePerformanceSignal">
+        <rdfs:subClassOf rdf:resource="http://example.com/slowmo#PerformanceSignal"/>
+        <obo:IAO_0000115>A performance signal that indicates the performance is bad</obo:IAO_0000115>
+        <rdfs:label>negative performance signal</rdfs:label>
+    </owl:Class>
+
+
+
+    <!-- http://example.com/slowmo#NondominantPerformanceBehaviorCapability -->
+
+    <owl:Class rdf:about="http://example.com/slowmo#NondominantPerformanceBehaviorCapability">
+        <rdfs:subClassOf rdf:resource="http://example.com/slowmo#PerformanceBehaviorcCapability"/>
+        <obo:IAO_0000115>A capability realized when a performer is not able to consistently carry out a performance behavior at a high level of excellence</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">nondominant performance behavior capability</rdfs:label>
+    </owl:Class>
+
+
+
+    <!-- http://example.com/slowmo#NormativeComparator -->
+
+    <owl:Class rdf:about="http://example.com/slowmo#NormativeComparator">
+        <obo:IAO_0000115>Definition Needed</obo:IAO_0000115>
+        <rdfs:label>normative comparator</rdfs:label>
+    </owl:Class>
+
+
+
+    <!-- http://example.com/slowmo#PeerComparison -->
+
+    <owl:Class rdf:about="http://example.com/slowmo#PeerComparison">
+        <rdfs:label>peer comparison</rdfs:label>
+    </owl:Class>
+
+
+
+    <!-- http://example.com/slowmo#Performance -->
+
+    <owl:Class rdf:about="http://example.com/slowmo#Performance">
+        <obo:IAO_0000115>a determinable quality that is dependant on human beings organizations and instantiated by measurement values of a behavior process</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">performance</rdfs:label>
+    </owl:Class>
+
+
+
+    <!-- http://example.com/slowmo#PerformanceBehaviorcCapability -->
+
+    <owl:Class rdf:about="http://example.com/slowmo#PerformanceBehaviorcCapability">
+        <obo:IAO_0000115>A capability realized in the process of performing a performance behavior</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">performance behavior capability</rdfs:label>
+    </owl:Class>
+
+
+
+    <!-- http://example.com/slowmo#PerformanceCardinality -->
+
+    <owl:Class rdf:about="http://example.com/slowmo#PerformanceCardinality">
+        <rdfs:subClassOf rdf:resource="http://example.com/slowmo#DimensionCardinality"/>
+        <rdfs:label>performance cardinality</rdfs:label>
+    </owl:Class>
+
+
+
+    <!-- http://example.com/slowmo#PerformanceGap -->
+
+    <owl:Class rdf:about="http://example.com/slowmo#PerformanceGap">
+        <rdfs:label>performance gap</rdfs:label>
+    </owl:Class>
+
+
+
+    <!-- http://example.com/slowmo#PerformanceSignal -->
+
+    <owl:Class rdf:about="http://example.com/slowmo#PerformanceSignal">
+        <obo:IAO_0000115>An indication of the state affairs of an accomplished behavior</obo:IAO_0000115>
+        <rdfs:label>performance signal</rdfs:label>
+    </owl:Class>
+
+
+
+    <!-- http://example.com/slowmo#PerformerCardinality -->
+
+    <owl:Class rdf:about="http://example.com/slowmo#PerformerCardinality">
+        <rdfs:subClassOf rdf:resource="http://example.com/slowmo#DimensionCardinality"/>
+        <rdfs:label>performer cardinality</rdfs:label>
+    </owl:Class>
+
+
+
+    <!-- http://example.com/slowmo#PositivePerformanceGap -->
+
+    <owl:Class rdf:about="http://example.com/slowmo#PositivePerformanceGap">
+        <rdfs:subClassOf rdf:resource="http://example.com/slowmo#PerformanceGap"/>
+        <rdfs:label>positive performance gap</rdfs:label>
+    </owl:Class>
+
+
+
+    <!-- http://example.com/slowmo#PositivePerformanceSignal -->
+
+    <owl:Class rdf:about="http://example.com/slowmo#PositivePerformanceSignal">
+        <rdfs:subClassOf rdf:resource="http://example.com/slowmo#PerformanceSignal"/>
+        <obo:IAO_0000115>A performance signal that indicates the performance is good</obo:IAO_0000115>
+        <rdfs:label>positive performance signal</rdfs:label>
+    </owl:Class>
+
+
+
+    <!-- http://example.com/slowmo#PostalCode -->
+
+    <owl:Class rdf:about="http://example.com/slowmo#PostalCode">
+        <obo:IAO_0000115>Needed</obo:IAO_0000115>
+        <rdfs:label>postal code</rdfs:label>
+    </owl:Class>
+
+
+
+    <!-- http://example.com/slowmo#PreventionFocus -->
+
+    <owl:Class rdf:about="http://example.com/slowmo#PreventionFocus">
+        <rdfs:subClassOf rdf:resource="http://example.com/slowmo#RegulatoryFocus"/>
+        <obo:IAO_0000115>definition needed</obo:IAO_0000115>
+        <rdfs:label>prevention focus</rdfs:label>
+    </owl:Class>
+
+
+
+    <!-- http://example.com/slowmo#PromotionFocus -->
+
+    <owl:Class rdf:about="http://example.com/slowmo#PromotionFocus">
+        <rdfs:subClassOf rdf:resource="http://example.com/slowmo#RegulatoryFocus"/>
+        <obo:IAO_0000115>Definition Needed</obo:IAO_0000115>
+        <rdfs:label>promotion focus</rdfs:label>
+    </owl:Class>
+
+
+
+    <!-- http://example.com/slowmo#RegulatoryFocus -->
+
+    <owl:Class rdf:about="http://example.com/slowmo#RegulatoryFocus">
+        <obo:IAO_0000115>a sensitivity of the recipient</obo:IAO_0000115>
+        <rdfs:label>regulatory focus</rdfs:label>
+    </owl:Class>
+
+
+
+    <!-- http://example.com/slowmo#RelatedLocation -->
+
+    <owl:Class rdf:about="http://example.com/slowmo#RelatedLocation">
+        <rdfs:subClassOf rdf:resource="http://example.com/slowmo#Location"/>
+        <rdfs:label>related location</rdfs:label>
+    </owl:Class>
+
+
+
+    <!-- http://example.com/slowmo#ShowsBigGap -->
+
+    <owl:Class rdf:about="http://example.com/slowmo#ShowsBigGap">
+        <rdfs:subClassOf rdf:resource="http://example.com/slowmo#ShowsGap"/>
+        <rdfs:label>shows big gap</rdfs:label>
+    </owl:Class>
+
+
+
+    <!-- http://example.com/slowmo#ShowsGap -->
+
+    <owl:Class rdf:about="http://example.com/slowmo#ShowsGap">
+        <rdfs:label>shows gap</rdfs:label>
+    </owl:Class>
+
+
+
+    <!-- http://example.com/slowmo#ShowsNegativeGap -->
+
+    <owl:Class rdf:about="http://example.com/slowmo#ShowsNegativeGap">
+        <rdfs:subClassOf rdf:resource="http://example.com/slowmo#ShowsGap"/>
+        <rdfs:label>shows negative gap</rdfs:label>
+    </owl:Class>
+
+
+
+    <!-- http://example.com/slowmo#ShowsPositiveGap -->
+
+    <owl:Class rdf:about="http://example.com/slowmo#ShowsPositiveGap">
+        <rdfs:subClassOf rdf:resource="http://example.com/slowmo#ShowsGap"/>
+        <rdfs:label>shows positive gap</rdfs:label>
+    </owl:Class>
+
+
+
+    <!-- http://example.com/slowmo#ShowsSmallGap -->
+
+    <owl:Class rdf:about="http://example.com/slowmo#ShowsSmallGap">
+        <rdfs:subClassOf rdf:resource="http://example.com/slowmo#ShowsGap"/>
+        <rdfs:label>shows small gap</rdfs:label>
+    </owl:Class>
+
+
+
+    <!-- http://example.com/slowmo#ShowsTrend -->
+
+    <owl:Class rdf:about="http://example.com/slowmo#ShowsTrend">
+        <rdfs:label>shows trend</rdfs:label>
+    </owl:Class>
+
+
+
+    <!-- http://example.com/slowmo#StreetAddress -->
+
+    <owl:Class rdf:about="http://example.com/slowmo#StreetAddress">
+        <obo:IAO_0000115>Needed</obo:IAO_0000115>
+        <rdfs:label>street address</rdfs:label>
+    </owl:Class>
+
+
+
+    <!-- http://example.com/slowmo#TimeCardinality -->
+
+    <owl:Class rdf:about="http://example.com/slowmo#TimeCardinality">
+        <rdfs:subClassOf rdf:resource="http://example.com/slowmo#DimensionCardinality"/>
+        <rdfs:label>time cardinality</rdfs:label>
+    </owl:Class>
+
+
+
+    <!-- http://example.com/slowmo#TrendFigure -->
+
+    <owl:Class rdf:about="http://example.com/slowmo#TrendFigure">
+        <rdfs:subClassOf rdf:resource="http://example.com/slowmo#Figure"/>
+        <rdfs:label>trend figure</rdfs:label>
+    </owl:Class>
+
+
+
+    <!-- http://example.com/slowmo#slowmo_0000010 -->
+
+    <owl:Class rdf:about="http://example.com/slowmo#slowmo_0000010">
+        <rdfs:subClassOf rdf:resource="http://example.com/slowmo#slowmo_0000142"/>
+        <obo:IAO_0000115>a measurable action that is engaged in by a performer</obo:IAO_0000115>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">obsolete behavior</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+    </owl:Class>
+
+
+
+    <!-- http://example.com/slowmo#slowmo_0000024 -->
+
+    <owl:Class rdf:about="http://example.com/slowmo#slowmo_0000024">
+        <rdfs:subClassOf rdf:resource="http://example.com/slowmo#slowmo_0000142"/>
+        <obo:IAO_0000115>The social and physical environment in which an intervention takes place.</obo:IAO_0000115>
+        <rdfs:comment>Adapted from West, R. and Michie, S. (2016). A Guide to Development and Evaluation of Digital Behavior Interventions in Healthcare. Silverback Publishing.</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">obsolete setting</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+    </owl:Class>
+
+
+
+    <!-- http://example.com/slowmo#slowmo_0000035 -->
+
+    <owl:Class rdf:about="http://example.com/slowmo#slowmo_0000035">
+        <rdfs:subClassOf rdf:resource="http://example.com/slowmo#slowmo_0000142"/>
+        <obo:IAO_0000115>An appraisal with represent the performance behavior.</obo:IAO_0000115>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">obsolete appraisal of performance behavior</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+    </owl:Class>
+
+
+
+    <!-- http://example.com/slowmo#slowmo_0000142 -->
+
+    <owl:Class rdf:about="http://example.com/slowmo#slowmo_0000142">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">obsolete legacy terms</rdfs:label>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
+
+
+
+    <!-- http://example.com/slowmo#spek -->
+
+    <owl:Class rdf:about="http://example.com/slowmo#spek">
+        <obo:IAO_0000115>def needed</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">spek</rdfs:label>
+    </owl:Class>
+
+
+
+    <!--
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+  
 </rdf:RDF>
 
 
 
 <!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
-
