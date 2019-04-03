@@ -215,34 +215,7 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
     //
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
-
     
-
-
-    <!-- http://example.com/slowmo#AddressCountry -->
-
-    <owl:Class rdf:about="http://example.com/slowmo#AddressCountry">
-        <rdfs:label>address country</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://example.com/slowmo#AddressLocality -->
-
-    <owl:Class rdf:about="http://example.com/slowmo#AddressLocality">
-        <rdfs:label>address locality</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://example.com/slowmo#AddressRegion -->
-
-    <owl:Class rdf:about="http://example.com/slowmo#AddressRegion">
-        <rdfs:label>address region</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- http://example.com/slowmo#AncestorPerformer -->
 
     <owl:Class rdf:about="http://example.com/slowmo#AncestorPerformer">
@@ -404,15 +377,6 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
     </owl:Class>
     
 
-
-    <!-- http://example.com/slowmo#Name -->
-
-    <owl:Class rdf:about="http://example.com/slowmo#Name">
-        <rdfs:label>name</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- http://example.com/slowmo#NegativePerformanceGap -->
 
     <owl:Class rdf:about="http://example.com/slowmo#NegativePerformanceGap">
@@ -529,15 +493,6 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
     </owl:Class>
     
 
-
-    <!-- http://example.com/slowmo#PostalCode -->
-
-    <owl:Class rdf:about="http://example.com/slowmo#PostalCode">
-        <rdfs:label>postal code</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- http://example.com/slowmo#PreventionFocus -->
 
     <owl:Class rdf:about="http://example.com/slowmo#PreventionFocus">
@@ -624,15 +579,6 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
         <rdfs:label>shows trend</rdfs:label>
     </owl:Class>
     
-
-
-    <!-- http://example.com/slowmo#StreetAddress -->
-
-    <owl:Class rdf:about="http://example.com/slowmo#StreetAddress">
-        <rdfs:label>street address</rdfs:label>
-    </owl:Class>
-    
-
 
     <!-- http://example.com/slowmo#TimeCardinality -->
 
