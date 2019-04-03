@@ -138,9 +138,9 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
     
 
 
-    <!-- http://example.com/slowmo#IsAboutISR -->
+    <!-- http://example.com/slowmo#IsAboutCausalPathway -->
 
-    <owl:ObjectProperty rdf:about="http://example.com/slowmo#IsAboutISR">
+    <owl:ObjectProperty rdf:about="http://example.com/slowmo#IsAboutCausalPathway">
         <rdfs:subPropertyOf rdf:resource="http://example.com/slowmo#IsAbout"/>
         <rdfs:label>is about ISR</rdfs:label>
     </owl:ObjectProperty>
@@ -364,17 +364,6 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
         <rdfs:label>input table</rdfs:label>
     </owl:Class>
     
-
-
-    <!-- http://example.com/slowmo#InterventionSituationrRelationship -->
-
-    <owl:Class rdf:about="http://example.com/slowmo#InterventionSituationrRelationship">
-        <obo:IAO_0000115>a causal pathway from an intervention to a situation</obo:IAO_0000115>
-        <rdfs:label>intervention situation relationship</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- http://example.com/slowmo#Location -->
 
     <owl:Class rdf:about="http://example.com/slowmo#Location">
