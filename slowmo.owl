@@ -365,6 +365,7 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
 
     <owl:Class rdf:about="http://example.com/slowmo#Measure">
         <rdfs:label>measure</rdfs:label>
+        <obo:IAO_0000115>A performance signal assessing a behavior</obo:IAO_0000115>
     </owl:Class>
     
 
@@ -381,6 +382,7 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
 
     <owl:Class rdf:about="http://example.com/slowmo#NegativePerformanceGap">
         <rdfs:subClassOf rdf:resource="http://example.com/slowmo#PerformanceGap"/>
+        <obo:IAO_0000115>A performance signal that is mathematically less than some comparator</obo:IAO_0000115>
         <rdfs:label>negative performance gap</rdfs:label>
     </owl:Class>
     
@@ -455,6 +457,11 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
         <rdfs:label>performance gap</rdfs:label>
     </owl:Class>
     
+    <!-- http://example.com/slowmo#PerformanceTrend -->
+
+    <owl:Class rdf:about="http://example.com/slowmo#PerformanceTrend">
+        <rdfs:label>performance trend</rdfs:label>
+    </owl:Class>
 
 
     <!-- http://example.com/slowmo#PerformanceSignal -->
@@ -479,9 +486,25 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
 
     <owl:Class rdf:about="http://example.com/slowmo#PositivePerformanceGap">
         <rdfs:subClassOf rdf:resource="http://example.com/slowmo#PerformanceGap"/>
+        <obo:IAO_0000115>A performance signal that is the mathematically greater than a comparator.</obo:IAO_0000115>
         <rdfs:label>positive performance gap</rdfs:label>
     </owl:Class>
     
+    <!-- http://example.com/slowmo#NegativePerformanceTrend -->
+
+    <owl:Class rdf:about="http://example.com/slowmo#NegativePerformanceTrend">
+        <rdfs:subClassOf rdf:resource="http://example.com/slowmo#PerformanceTrend"/>
+        <obo:IAO_0000115>A performance signal that decreases in the mathematical sense.</obo:IAO_0000115>
+        <rdfs:label>negative performance trend</rdfs:label>
+    </owl:Class>
+
+    <!-- http://example.com/slowmo#PositivePerformanceTrend -->
+
+    <owl:Class rdf:about="http://example.com/slowmo#PositivePerformanceTrend">
+        <rdfs:subClassOf rdf:resource="http://example.com/slowmo#PerformanceTrend"/>
+        <obo:IAO_0000115>A performance signal that increases in the mathematical sense.</obo:IAO_0000115>
+        <rdfs:label>positive performance trend</rdfs:label>
+    </owl:Class>
 
 
     <!-- http://example.com/slowmo#PositivePerformanceSignal -->
