@@ -206,6 +206,30 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
         <rdfs:label>has disposition</rdfs:label>
     </owl:ObjectProperty>
     
+    <!--
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <owl:DatatypeProperty rdf:about="http://example.com/slowmo#ColumnUse">
+      <rdfs:range>
+        <owl:DataRange>
+          <owl:oneOf>
+            <rdf:Bag>
+              <rdf:li>identifier</rdf:li>
+              <rdf:li>time</rdf:li>
+              <rdf:li>value</rdf:li>
+              <rdf:li>numerator</rdf:li>
+              <rdf:li>denominator</rdf:li>
+            </rdf:Bag>
+          </owl:oneOf>
+        </owl:DataRange>
+      </rdfs:range>
+    </owl:DatatypeProperty>
+
 
 
     <!-- 
@@ -267,15 +291,6 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
         <rdfs:label>capability barrier</rdfs:label>
     </owl:Class>
     
-
-
-    <!-- http://example.com/slowmo#ColumnUse -->
-
-    <owl:Class rdf:about="http://example.com/slowmo#ColumnUse">
-        <rdfs:label>column use</rdfs:label>
-    </owl:Class>
-    
-
 
     <!-- http://example.com/slowmo#Delivery -->
 
