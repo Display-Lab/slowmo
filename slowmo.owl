@@ -13,10 +13,12 @@
      xmlns:csvw="http://www.w3.org/ns/csvw#">
     <owl:Ontology rdf:about="http://example.com/slowmo">
         <owl:imports rdf:resource="http://www.w3.org/ns/csvw#"/>
+        <owl:imports rdf:resource="http://purl.obolibrary.org/obo/iao/2017-03-24/iao.owl"/>
+        <dc:description xml:lang="en">Slowmo ontology is an application ontology that is essentially a bag of words used in the DISPLAY Lab feedback tailoring pipeline.  Terms defined here provide stable naming and meaning conventions for the software.</dc:description>
         <rdfs:comment>The ontology content is licensed under a Creative Commons Attribution 4.0 International License.
 
 ### Source Code
-Copyright [2018] [Regents of the University of Michigan]
+Copyright 2018 Regents of the University of Michigan
 
 Licensed under the Apache License, Version 2.0 (the &amp;quot;License&amp;quot;);
 you may not use this file except in compliance with the License.
@@ -31,6 +33,14 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
     </owl:Ontology>
     
 
+    <!-- "has disposition" is http://purl.obolibrary.org/obo/RO_0000091 
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0000091">
+        <obo:IAO_0000115>A relation between an independent continuant (the bearer) and a disposition, in which the disposition specifically depends on the bearer for its existence.</obo:IAO_0000115>
+        <rdfs:label>has disposition</rdfs:label>
+    </owl:ObjectProperty>
+
+    -->
 
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
@@ -39,8 +49,6 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
     //
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
-
-    
 
 
     <!-- http://purl.obolibrary.org/obo/IAO_0000115 -->
@@ -126,8 +134,15 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
 
     <owl:ObjectProperty rdf:about="http://example.com/slowmo#HasCandidate">
         <rdfs:label>has candidate</rdfs:label>
+        <obo:IAO_0000115 xml:lang="en">Relationship describing a spek having performance feedback candidates.</obo:IAO_0000115>
     </owl:ObjectProperty>
     
+    <!-- http://example.com/slowmo#HasPrecondition -->
+
+    <owl:ObjectProperty rdf:about="http://example.com/slowmo#HasPrecondition">
+        <rdfs:label>has candidate</rdfs:label>
+        <obo:IAO_0000115 xml:lang="en">Relationship describing a causal pathway having preconditions.</obo:IAO_0000115>
+    </owl:ObjectProperty>
 
 
     <!-- http://example.com/slowmo#IsAbout -->
@@ -187,6 +202,29 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
         <rdfs:label>uses</rdfs:label>
     </owl:ObjectProperty>
     
+    <!-- http://example.com/slowmo#HasModerator -->
+
+    <owl:ObjectProperty rdf:about="http://example.com/slowmo#HasModerator">
+        <rdfs:label>has moderator</rdfs:label>
+    </owl:ObjectProperty>
+
+    <!-- http://example.com/slowmo#ModeratorScore -->
+
+    <owl:ObjectProperty rdf:about="http://example.com/slowmo#ModeratorScore">
+        <rdfs:label>moderator score</rdfs:label>
+    </owl:ObjectProperty>
+
+    <!-- http://example.com/slowmo#KeyMessage -->
+
+    <owl:ObjectProperty rdf:about="http://example.com/slowmo#KeyMessage">
+        <rdfs:label>key message</rdfs:label>
+    </owl:ObjectProperty>
+
+    <!-- http://example.com/slowmo#ImplementationStrategy -->
+
+    <owl:ObjectProperty rdf:about="http://example.com/slowmo#ImplementationStrategy">
+        <rdfs:label>implementation strategy</rdfs:label>
+    </owl:ObjectProperty>
 
 
     <!-- http://example.com/slowmo#UsesInterventionProperty -->
@@ -198,13 +236,6 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
     
 
 
-    <!-- http://purl.obolibrary.org/obo/RO_0000091 -->
-
-    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0000091">
-        <obo:IAO_0000115>A relation between an independent continuant (the bearer) and a disposition, in which the disposition specifically depends on the bearer for its existence.</obo:IAO_0000115>
-        <rdfs:comment>Imported from the Relation Ontology</rdfs:comment>
-        <rdfs:label>has disposition</rdfs:label>
-    </owl:ObjectProperty>
     
     <!--
     ///////////////////////////////////////////////////////////////////////////////////////
@@ -291,6 +322,11 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
         <rdfs:label>capability barrier</rdfs:label>
     </owl:Class>
     
+    <!-- http://example.com/slowmo#Habituation -->
+
+    <owl:Class rdf:about="http://example.com/slowmo#Habituation">
+        <rdfs:label>habituation</rdfs:label>
+    </owl:Class>
 
     <!-- http://example.com/slowmo#Delivery -->
 
@@ -574,6 +610,11 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
         <rdfs:label>shows big gap</rdfs:label>
     </owl:Class>
     
+    <!-- http://example.com/slowmo#GapSize -->
+
+    <owl:Class rdf:about="http://example.com/slowmo#PerformanceGapSize">
+        <rdfs:label>performance gap size</rdfs:label>
+    </owl:Class>
 
 
     <!-- http://example.com/slowmo#ShowsGap -->
