@@ -15,32 +15,10 @@
         <owl:imports rdf:resource="http://www.w3.org/ns/csvw#"/>
         <owl:imports rdf:resource="http://purl.obolibrary.org/obo/iao/2017-03-24/iao.owl"/>
         <dc:description xml:lang="en">Slowmo ontology is an application ontology that is essentially a bag of words used in the DISPLAY Lab feedback tailoring pipeline.  Terms defined here provide stable naming and meaning conventions for the software.</dc:description>
-        <rdfs:comment>The ontology content is licensed under a Creative Commons Attribution 4.0 International License.
-
-### Source Code
-Copyright 2018 Regents of the University of Michigan
-
-Licensed under the Apache License, Version 2.0 (the &amp;quot;License&amp;quot;);
-you may not use this file except in compliance with the License.
-You may obtain a copy of the License at
-
-    http://www.apache.org/licenses/LICENSE-2.0
-
-Unless required by applicable law or agreed to in writing, software
-distributed under the License is distributed on an &amp;quot;AS IS&amp;quot; BASIS,
-WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License</rdfs:comment>
+        <rdfs:comment>The ontology content is licensed under a Creative Commons Attribution 4.0 International License.</rdfs:comment>
         <rdfs:comment>slomo is a working ontology-like structure in .owl used to define meta-terms, working-in-progress terms and IRIs needed for other knowledge-base processes. There is no import structure and currently no external dependancies.</rdfs:comment>
     </owl:Ontology>
     
-
-    <!-- "has disposition" is http://purl.obolibrary.org/obo/RO_0000091 
-
-    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0000091">
-        <obo:IAO_0000115>A relation between an independent continuant (the bearer) and a disposition, in which the disposition specifically depends on the bearer for its existence.</obo:IAO_0000115>
-        <rdfs:label>has disposition</rdfs:label>
-    </owl:ObjectProperty>
-
-    -->
 
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
@@ -148,16 +126,23 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
     <!-- http://example.com/slowmo#IsAbout -->
 
     <owl:ObjectProperty rdf:about="http://example.com/slowmo#IsAbout">
+        <rdfs:comment>Roughly equivalent to IAO_0000136</rdfs:comment>
         <rdfs:label>is about</rdfs:label>
     </owl:ObjectProperty>
     
+    <!-- http://example.com/slowmo#IsAbout -->
+
+    <owl:ObjectProperty rdf:about="http://example.com/slowmo#DescribedBy">
+        <rdfs:comment>Roughly inverse of IAO_0000136</rdfs:comment>
+        <rdfs:label>described by</rdfs:label>
+    </owl:ObjectProperty>
 
 
     <!-- http://example.com/slowmo#IsAboutCausalPathway -->
 
     <owl:ObjectProperty rdf:about="http://example.com/slowmo#IsAboutCausalPathway">
         <rdfs:subPropertyOf rdf:resource="http://example.com/slowmo#IsAbout"/>
-        <rdfs:label>is about ISR</rdfs:label>
+        <rdfs:label>is about causal pathway</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -194,7 +179,19 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
         <rdfs:label>is promoted by</rdfs:label>
     </owl:ObjectProperty>
     
+    <!-- http://example.com/slowmo#AncestorPerformer -->
 
+    <owl:ObjectProperty rdf:about="http://example.com/slowmo#AncestorPerformer">
+        <rdfs:label>ancestor performer</rdfs:label>
+        <rdfs:comment>Performer from which attributes of the subject were drawn.  In practice, the performer associated with a candidate.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+    <!-- http://example.com/slowmo#AncestorTemplate -->
+
+    <owl:ObjectProperty rdf:about="http://example.com/slowmo#AncestorTemplate">
+        <rdfs:label>ancestor template</rdfs:label>
+        <rdfs:comment>Template from which attributes of the subject were drawn. In practices, the template associated with a candidate.</rdfs:comment>
+    </owl:ObjectProperty>
 
     <!-- http://example.com/slowmo#Uses -->
 
@@ -270,22 +267,14 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
     //
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
-    
-    <!-- http://example.com/slowmo#AncestorPerformer -->
 
-    <owl:Class rdf:about="http://example.com/slowmo#AncestorPerformer">
-        <rdfs:label>ancestor performer</rdfs:label>
+    <!-- http://example.com/slowmo#Performer -->
+
+    <owl:Class rdf:about="http://example.com/slowmo#Performer">
+        <rdfs:comment>A foaf:person or foaf:organization that is doing a behavior.</rdfs:comment>
+        <rdfs:label>performer</rdfs:label>
     </owl:Class>
     
-
-
-    <!-- http://example.com/slowmo#AncestorTemplate -->
-
-    <owl:Class rdf:about="http://example.com/slowmo#AncestorTemplate">
-        <rdfs:label>ancestor template</rdfs:label>
-    </owl:Class>
-    
-
 
     <!-- http://example.com/slowmo#AppropriateCandidate -->
 
@@ -295,8 +284,6 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
         <rdfs:label xml:lang="en">appropriate candidate</rdfs:label>
     </owl:Class>
     
-
-
     <!-- http://example.com/slowmo#BehaviorChangeIntervention -->
 
     <owl:Class rdf:about="http://example.com/slowmo#BehaviorChangeIntervention">
@@ -310,7 +297,7 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
     <!-- http://example.com/slowmo#Candidate -->
 
     <owl:Class rdf:about="http://example.com/slowmo#Candidate">
-        <obo:IAO_0000115>An independent continuant which represents the union of the features of a situation and those of a template</obo:IAO_0000115>
+        <obo:IAO_0000115>An information content entity which represents the union of the features of a situation and those of a template.  This is a computational convenience that simplifies talking about a performer and template together.</obo:IAO_0000115>
         <rdfs:label xml:lang="en">candidate</rdfs:label>
     </owl:Class>
     
