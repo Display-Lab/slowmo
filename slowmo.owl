@@ -255,10 +255,12 @@
               <rdf:li>value</rdf:li>
               <rdf:li>numerator</rdf:li>
               <rdf:li>denominator</rdf:li>
+              <rdf:li>measure</rdf:li>
             </rdf:Bag>
           </owl:oneOf>
         </owl:DataRange>
       </rdfs:range>
+      <rdfs:comment>Enumeration of recognized uses a column can have in the performance data.</rdfs:comment>
     </owl:DatatypeProperty>
 
 
