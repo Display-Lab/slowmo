@@ -220,6 +220,20 @@
         <rdfs:label>key message</rdfs:label>
     </owl:ObjectProperty>
 
+    <!-- http://example.com/slowmo#WithComparator -->
+
+    <owl:ObjectProperty rdf:about="http://example.com/slowmo#WithComparator">
+        <rdfs:comment>Comparator, psdo_0000093, associated with the measure. </rdfs:comment>
+        <rdfs:label>with comparator</rdfs:label>
+    </owl:ObjectProperty>
+
+    <!-- http://example.com/slowmo#ComparisonValue -->
+
+    <owl:ObjectProperty rdf:about="http://example.com/slowmo#ComparisonValue">
+        <rdfs:comment>Measure specific value to compare to performance values. Assumed to be scaled to match the performance value of the measure</rdfs:comment>
+        <rdfs:label>comparison value</rdfs:label>
+    </owl:ObjectProperty>
+
     <!-- http://example.com/slowmo#ImplementationStrategy -->
 
     <owl:ObjectProperty rdf:about="http://example.com/slowmo#ImplementationStrategy">
