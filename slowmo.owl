@@ -130,7 +130,7 @@
         <rdfs:label>is about</rdfs:label>
     </owl:ObjectProperty>
     
-    <!-- http://example.com/slowmo#IsAbout -->
+    <!-- http://example.com/slowmo#DescribedBy -->
 
     <owl:ObjectProperty rdf:about="http://example.com/slowmo#DescribedBy">
         <rdfs:comment>Roughly inverse of IAO_0000136</rdfs:comment>
@@ -146,7 +146,6 @@
     </owl:ObjectProperty>
     
 
-
     <!-- http://example.com/slowmo#IsAboutPerformer -->
 
     <owl:ObjectProperty rdf:about="http://example.com/slowmo#IsAboutPerformer">
@@ -154,15 +153,20 @@
         <rdfs:label>is about performer</rdfs:label>
     </owl:ObjectProperty>
     
-
-
     <!-- http://example.com/slowmo#IsAboutTemplate -->
 
     <owl:ObjectProperty rdf:about="http://example.com/slowmo#IsAboutTemplate">
         <rdfs:subPropertyOf rdf:resource="http://example.com/slowmo#IsAbout"/>
         <rdfs:label xml:lang="en">is about template</rdfs:label>
     </owl:ObjectProperty>
-    
+
+    <!-- http://example.com/slowmo#IsAboutMeasure -->
+
+    <owl:ObjectProperty rdf:about="http://example.com/slowmo#IsAboutMeasure">
+        <rdfs:subPropertyOf rdf:resource="http://example.com/slowmo#IsAbout"/>
+        <rdfs:comment>Measure or set of measures used in the situation.  Practially, used to categorize performance attributes.  E.g. Alice described by positive performance gap for BP001 measure.</rdfs:comment>
+        <rdfs:label xml:lang="en">is about template</rdfs:label>
+    </owl:ObjectProperty>
 
 
     <!-- http://example.com/slowmo#IsAcceptableBy -->
@@ -170,7 +174,6 @@
     <owl:ObjectProperty rdf:about="http://example.com/slowmo#IsAcceptableBy">
         <rdfs:label>is acceptable by</rdfs:label>
     </owl:ObjectProperty>
-    
 
 
     <!-- http://example.com/slowmo#IsPromotedBy -->
