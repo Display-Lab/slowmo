@@ -140,6 +140,14 @@
 
     <!-- http://example.com/slowmo#IsAboutCausalPathway -->
 
+    <owl:ObjectProperty rdf:about="http://example.com/slowmo#IsAboutOrganization">
+        <rdfs:subPropertyOf rdf:resource="http://example.com/slowmo#IsAbout"/>
+        <rdfs:label>is about organization</rdfs:label>
+        <rdfs:comment>Organization providing feedback that the performers are a part of.</rdfs:comment>
+    </owl:ObjectProperty>
+
+    <!-- http://example.com/slowmo#IsAboutCausalPathway -->
+
     <owl:ObjectProperty rdf:about="http://example.com/slowmo#IsAboutCausalPathway">
         <rdfs:subPropertyOf rdf:resource="http://example.com/slowmo#IsAbout"/>
         <rdfs:label>is about causal pathway</rdfs:label>
