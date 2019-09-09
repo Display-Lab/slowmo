@@ -133,8 +133,15 @@
     <!-- http://example.com/slowmo#DescribedBy -->
 
     <owl:ObjectProperty rdf:about="http://example.com/slowmo#DescribedBy">
-        <rdfs:comment>Roughly inverse of IAO_0000136</rdfs:comment>
+        <rdfs:comment>Roughly inverse of IAO_0000136. Used to link performers and information content entities.  e.g. Alice described_by positive performance gap.</rdfs:comment>
         <rdfs:label>described by</rdfs:label>
+    </owl:ObjectProperty>
+
+    <!-- http://example.com/slowmo#RegardingMeasure -->
+
+    <owl:ObjectProperty rdf:about="http://example.com/slowmo#RegardingMeasure">
+        <rdfs:comment>Relates information content entity of performance to the measurement it relates to.  E.g. Alice described by positive performance gap regarding measure BP001. </rdfs:comment>
+        <rdfs:label xml:lang="en">regarding measure</rdfs:label>
     </owl:ObjectProperty>
 
 
@@ -172,8 +179,8 @@
 
     <owl:ObjectProperty rdf:about="http://example.com/slowmo#IsAboutMeasure">
         <rdfs:subPropertyOf rdf:resource="http://example.com/slowmo#IsAbout"/>
-        <rdfs:comment>Measure or set of measures used in the situation.  Practially, used to categorize performance attributes.  E.g. Alice described by positive performance gap for BP001 measure.</rdfs:comment>
-        <rdfs:label xml:lang="en">is about template</rdfs:label>
+        <rdfs:comment>Measure or set of measures used in the situation. E.g. BP001 measure.</rdfs:comment>
+        <rdfs:label xml:lang="en">is about measure</rdfs:label>
     </owl:ObjectProperty>
 
 
