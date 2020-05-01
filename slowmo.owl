@@ -106,6 +106,12 @@
      -->
 
     
+    <!-- http://example.com/slowmo#HasPaver -->
+
+    <owl:ObjectProperty rdf:about="http://example.com/slowmo#HasPaver">
+        <rdfs:label>has candidate</rdfs:label>
+        <obo:IAO_0000115 xml:lang="en">Relationship describing a spek having performance feedback pavers.</obo:IAO_0000115>
+    </owl:ObjectProperty>
 
 
     <!-- http://example.com/slowmo#HasCandidate -->
@@ -335,6 +341,12 @@
         <rdfs:label xml:lang="en">candidate</rdfs:label>
     </owl:Class>
     
+    <!-- http://example.com/slowmo#Paver -->
+
+    <owl:Class rdf:about="http://example.com/slowmo#Paver">
+        <obo:IAO_0000115>An information content entity which represents the features of a performers situation for a specific measure and comparator.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">paver</rdfs:label>
+    </owl:Class>
 
 
     <!-- http://example.com/slowmo#CapabilityBarrier -->
