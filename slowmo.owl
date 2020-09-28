@@ -548,6 +548,14 @@
     </owl:Class>
 
 
+
+    <!-- http://example.com/slowmo#TrendSlope -->
+
+    <owl:Class rdf:about="http://example.com/slowmo#TrendSlope">
+        <rdfs:label>performance trend slope</rdfs:label>
+    </owl:Class>
+
+
     <!-- http://example.com/slowmo#PerformanceSignal -->
 
     <owl:Class rdf:about="http://example.com/slowmo#PerformanceSignal">
